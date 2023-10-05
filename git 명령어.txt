@@ -1,0 +1,14 @@
+1. 로컬저장소(git_test 폴더) - 원격저장소(AI11_lecture) 연결
+- git init
+- git clone [원격저장소_주소]
+
+- git add .	"모든 파일에 대해 작업한다."
+2. commit ("반영하다") :: 변경된 사항을 기록
+	git commit -m "커밋메시지"
+3. push ("밀어넣는다") :: 로컬->원격 밀어넣기
+	커밋을 한 다음에 푸쉬해야함
+	git push [원격지주소] [branch명-main]
+
+4. pull ("당기다") :: 로컬<-원격 당겨받기
+	단독으로 당겨받으면 됌
+	git pull [원격지주소] [branch명-main]
