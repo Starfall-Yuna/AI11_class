@@ -67,6 +67,9 @@ on djsinger.hit_song_id = djsong.id;
 
 
 
+insert into djsong values(mymusic.nextval, 'You' || '&' || 'Me', 12000);
+
+select * from djsong;
 
 
 
