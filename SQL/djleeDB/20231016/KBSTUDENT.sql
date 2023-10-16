@@ -33,10 +33,13 @@ INSERT INTO KBSTUDENT VALUES('5', '권병진', '004');
 
 --JOIN
 -- 두 개 이상의 테이블을 공통된 열(COLUMN)로 묶는다.
+--KBSTUDENT.NAME = 학생 테이블의 이름
+--KBMAJOR.NAME = 전공 테이블의 이름
 SELECT HAKBEON, KBSTUDENT.NAME, KBMAJOR.NAME FROM KBSTUDENT JOIN KBMAJOR 
 ON kbstudent.hakgwa_code=KBMAJOR.CODE;
 
-SELECT HAKBEON 학번, KBSTUDENT.NAME 학생이름, KBMAJOR.NAME 학과명 
+-- 만약 학 번 이런식으로 할 거라면 큰 따옴표로 입력하면 됨
+SELECT HAKBEON "학 번", KBSTUDENT.NAME 학생이름, KBMAJOR.NAME 학과명 
 FROM KBSTUDENT JOIN KBMAJOR 
 ON kbstudent.hakgwa_code=KBMAJOR.CODE;
 
