@@ -1,0 +1,17 @@
+pull하기
+git init //만약 아무 것도 없는 새폴더라면?
+git add .
+git pull 주소 브랜치명
+
+origin 등록
+git remote add origin 주소
+
+커밋하기
+git add .
+git commit -m "message"
+
+푸시하기
+git push origin mybranch
+
+
+

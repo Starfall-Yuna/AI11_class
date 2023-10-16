@@ -1,0 +1,18 @@
+1) 붙여넣기 : shift + insert
+
+2) git 장소 등록 : git init
+
+3) git 원격지 등록 :  git remote add origin http://192.168.0.168/Bonobo.Git.Server2/1234.git 
+
+4) git 상태 확인 : git status
+
+5) commit 과정
+	1) git add test.txt       (모든 폴더 선택시에는 git add .)
+	2) git commit -m "test"       
+	3) git push origin master(git push 원격지 브랜치명)
+
+6) git pull : git pull origin main
+
+7) git clone : git clone 주소 브랜치명
+clone 으로 하면 싹다 받아짐(브랜치 명 안 보임)
+git clone http://192.168.0.77/Bonobo.Git.Server2/LaserMarker_64bit_FlipperInside.git

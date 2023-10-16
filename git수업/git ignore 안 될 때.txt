@@ -1,0 +1,6 @@
+https://growingarchive.tistory.com/244
+
+
+git rm -r --cached .
+git add .
+git commit -m "removed cached"
