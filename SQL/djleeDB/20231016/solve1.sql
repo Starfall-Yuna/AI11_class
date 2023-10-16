@@ -66,10 +66,31 @@ select djsinger.name 가수이름, djsong.title 히트곡이름 from djsinger full join d
 on djsinger.hit_song_id = djsong.id;
 
 
-
-insert into djsong values(mymusic.nextval, 'You' || '&' || 'Me', 12000);
-
 select * from djsong;
+delete from djsong where id=9;
+--시퀀스 값 바꾸는 법
+--1. 지운다.
+drop sequence mymusic;
+--2. 새로 만들되, 내가 시작하고 싶은 번호부터 시작하도록 한다.
+create sequence mymusic start with 7 increment by 1;
+
+
+-- || : 문자열 이어붙이기(java에서 +로 문자열 이어붙인 거랑 똑같음)
+insert into djsong values(mymusic.nextval, 'You' || '&' || 'Me', 12000);
+select mymusic.currval from dual; 
+insert into djsong values(mymusic.nextval, 'Super Shy', 15000);
+
+delete from djsong where title='Super Shy';
+select * from djsong;
+
+insert into djsong values(mymusic.nextval, '호랑나비', 9000);
+select mymusic.currval from dual;
+
+drop SEQUENCE mymusic;
+create sequence mymusic start with 8 increment by 1;
+delete from djsong where title='호랑나비';
+insert into djsong values(mymusic.nextval, '호랑나비', 9000);
+
 
 
 
