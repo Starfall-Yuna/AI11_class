@@ -1,0 +1,102 @@
+create table department (
+code char(3) PRIMARY KEY,
+name varchar2(100)
+);
+
+INSERT INTO department (code, name) VALUES ('D01', '경영');
+INSERT INTO department (code, name) VALUES ('D02', '마케팅');
+INSERT INTO department (code, name) VALUES ('D03', '재무');
+
+--직급
+create table job_title (
+code int primary key,
+name varchar2(100)
+);
+
+INSERT INTO job_title (code, name) VALUES (1, '부장');
+INSERT INTO job_title (code, name) VALUES (2, '과장');
+INSERT INTO job_title (code, name) VALUES (3, '대리');
+
+--인사
+ CREATE TABLE employee (
+    id char(5) PRIMARY KEY,
+    department_code char(3) REFERENCES department(code),
+    job_title_code int REFERENCES job_title(code),
+    name varchar2(100),
+    age int,
+    gender char(1),
+    hp varchar2(15) UNIQUE
+);
+
+
+
+INSERT INTO employee (id, department_code, job_title_code, name, age, gender, hp) 
+VALUES ('E01', 'D01', 1, 'Kim', 32, 'M', '010-1234-5678');
+
+
+INSERT INTO employee (id, department_code, job_title_code, name, age, gender, hp) 
+VALUES ('E02', 'D01', 2, 'Lee', 28, 'F', '010-2345-6789');
+
+INSERT INTO employee (id, department_code, job_title_code, name, age, gender, hp) 
+VALUES ('E03', 'D01', 3, 'Park', 24, 'M', '010-3456-7890');
+INSERT INTO employee (id, department_code, job_title_code, name, age, gender, hp) 
+VALUES ('E04', 'D02', 1, 'Choi', 35, 'F', '010-4567-8901');
+INSERT INTO employee (id, department_code, job_title_code, name, age, gender, hp) 
+VALUES ('E05', 'D02', 2, 'Yoo', 31, 'M', '010-5678-9012');
+INSERT INTO employee (id, department_code, job_title_code, name, age, gender, hp) 
+VALUES ('E06', 'D02', 3, 'Jung', 27, 'F', '010-6789-0123');
+INSERT INTO employee (id, department_code, job_title_code, name, age, gender, hp) 
+VALUES ('E07', 'D03', 1, 'Kang', 38, 'M', '010-7890-1234');
+INSERT INTO employee (id, department_code, job_title_code, name, age, gender, hp) 
+VALUES ('E08', 'D03', 2, 'Han', 34, 'F', '010-8901-2345');
+INSERT INTO employee (id, department_code, job_title_code, name, age, gender, hp) 
+VALUES ('E09', 'D03', 3, 'Seo', 30, 'M', '010-8787-3451');
+INSERT INTO employee (id, department_code, job_title_code, name, age, gender, hp) 
+VALUES ('E10', 'D03', 3, 'Han', 37, 'F', '010-0017-3090');
+
+SELECT * FROM EMPLOYEE;
+SELECT * FROM department;
+SELECT * FROM job_title;
+
+
+
+
+--성이 이씨인 사람을 찾는 쿼리를 작성
+SELECT * FROM employee WHERE name LIKE 'L%';
+-- 가장 많은 나이는 몇 살인지 출력
+SELECT MAX(age) FROM employee;
+-- 가장 나이가 어린 사람은 누구인지 출력
+SELECT MIN(age) minage FROM employee;
+
+create view findMinAge as  SELECT MIN(age) minage FROM employee;
+SELECT * FROM employee WHERE age = (select minage from findMinAge);
+-- 가장 나이가 많은 부서를 찾기
+
+
+SELECT department_code, avg(age) FROM employee group by department_code;
+
+create view show_avg_age_dept as SELECT department_code, avg(age) deptavgage FROM employee group by department_code;
+
+select * from show_avg_age_dept;
+select max(deptavgage) from show_avg_age_dept;
+
+select name, deptavgage from show_avg_age_dept join department on show_avg_age_dept.department_code=department.code;
+
+
+select name, deptavgage from show_avg_age_dept join department on show_avg_age_dept.department_code=department.code where deptavgage=(select max(deptavgage) from show_avg_age_dept);
+
+
+select gender, avg(age) from employee group by gender;
+
+명령의 93 행에서 시작하는 중 오류 발생 -
+insert into show_avg_age_dept values('000',300)
+오류 발생 명령행: 93 열: 1
+오류 보고 -
+SQL 오류: ORA-01733: 가상 열은 사용할 수 없습니다
+01733. 00000 -  "virtual column not allowed here"
+*Cause:    
+*Action:
+
+
+select * from show_avg_age_dept;
+insert into show_avg_age_dept values('000',300);
