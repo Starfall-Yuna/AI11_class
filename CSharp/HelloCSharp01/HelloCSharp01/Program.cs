@@ -18,6 +18,8 @@ namespace HelloCSharp01
             //cw : Console.WriteLine 코드의 코드 조각
             //visual studio에서 C#을 하면 자동 완성이 잘 되어 있음
             Console.WriteLine("이동준");
+                                 
+
         }
     }
 }
