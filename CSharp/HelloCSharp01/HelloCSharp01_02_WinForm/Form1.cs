@@ -30,5 +30,50 @@ namespace HelloCSharp01_02_WinForm
             int num2 = int.Parse(textBox3.Text);
             MessageBox.Show("두 값의 합 : " + (num1+num2));
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int num1 = int.Parse(textBox2.Text);
+            //ctrl + d 누르면 줄 복사 됨
+            int num2 = int.Parse(textBox3.Text);
+            MessageBox.Show("두 값의 차 : " + (num1 - num2));
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int num1 = int.Parse(textBox2.Text);
+            //ctrl + d 누르면 줄 복사 됨
+            int num2 = int.Parse(textBox3.Text);
+            MessageBox.Show("두 값의 곱 : " + (num1 * num2));
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            int num1 = int.Parse(textBox2.Text);
+            //ctrl + d 누르면 줄 복사 됨
+            int num2 = int.Parse(textBox3.Text);
+            MessageBox.Show("두 값의 나누기 : " + (num1 / num2));
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            int num1 = int.Parse(textBox2.Text);
+            //ctrl + d 누르면 줄 복사 됨
+            int num2 = int.Parse(textBox3.Text);
+            MessageBox.Show("두 값을 나눈 나머지 : " + (num1 % num2));
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            int num1 = int.Parse(textBox2.Text);
+            //ctrl + d 누르면 줄 복사 됨
+            int num2 = int.Parse(textBox3.Text);
+
+            MessageBox.Show("두 값의 합("+num1+"+"+num2+"):"+(num1+num2));
+            MessageBox.Show(string.Format("두 값의 합({0}+{1}):{2}",
+                num1,num2,num1+num2));
+            MessageBox.Show($"두 값의 합({num1}+{num2}):{num1+num2}");
+
+        }
     }
 }
