@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloCSharp01_05_chap03_sol
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloCSharp01_06_chap04", "HelloCSharp01_06_chap04\HelloCSharp01_06_chap04.csproj", "{4727C9E8-6CD5-4BCF-8CC7-F9A7ED2AACEF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Solve", "Solve\Solve.csproj", "{C76F6F53-5DCC-43E2-9176-FB3232655081}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -97,6 +99,18 @@ Global
 		{4727C9E8-6CD5-4BCF-8CC7-F9A7ED2AACEF}.Release|x64.Build.0 = Release|Any CPU
 		{4727C9E8-6CD5-4BCF-8CC7-F9A7ED2AACEF}.Release|x86.ActiveCfg = Release|Any CPU
 		{4727C9E8-6CD5-4BCF-8CC7-F9A7ED2AACEF}.Release|x86.Build.0 = Release|Any CPU
+		{C76F6F53-5DCC-43E2-9176-FB3232655081}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C76F6F53-5DCC-43E2-9176-FB3232655081}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C76F6F53-5DCC-43E2-9176-FB3232655081}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C76F6F53-5DCC-43E2-9176-FB3232655081}.Debug|x64.Build.0 = Debug|Any CPU
+		{C76F6F53-5DCC-43E2-9176-FB3232655081}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C76F6F53-5DCC-43E2-9176-FB3232655081}.Debug|x86.Build.0 = Debug|Any CPU
+		{C76F6F53-5DCC-43E2-9176-FB3232655081}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C76F6F53-5DCC-43E2-9176-FB3232655081}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C76F6F53-5DCC-43E2-9176-FB3232655081}.Release|x64.ActiveCfg = Release|Any CPU
+		{C76F6F53-5DCC-43E2-9176-FB3232655081}.Release|x64.Build.0 = Release|Any CPU
+		{C76F6F53-5DCC-43E2-9176-FB3232655081}.Release|x86.ActiveCfg = Release|Any CPU
+		{C76F6F53-5DCC-43E2-9176-FB3232655081}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
