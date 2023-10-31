@@ -116,5 +116,6 @@ namespace HelloCSharp04
             label_1.Text = a + ""; //5
             label_2.Text = b + ""; //3
         }
+
     }
 }
