@@ -1,0 +1,9 @@
+1. SayHello의 리턴값을
+MessageBox.Show가 아니고
+내가 만든 Form에 전송시킨 뒤 
+화면에 띄우기
+
+2. Magician, Car, Dron, Flight, Dragon, Unicorn, HCar, BattleCruiser도 실습해보기 
+
+
+3시 문제 풀이 시작
