@@ -1,0 +1,37 @@
+xml <user></user>
+json
+csv(comma separate value)
+이름,학번,나이
+이동준,09,34
+유지웅,10,33
+
+
+json = javaScript Object Notation
+자바스크립트 객체 표현법
+( java!=javaScript )
+
+java의 HashMap, C#의 Dictionary
+key-value
+
+{key:value, key:value}
+
+{"totSellamnt":3681782000,
+"returnValue":"success",
+"drwNoDate":"2002-12-07",
+"firstWinamnt":0,
+"drwtNo6":40,
+"drwtNo4":33,
+"firstPrzwnerCo":0,"drwtNo5":37,"bnusNo":16,"firstAccumamnt":863604600,"drwNo":1,"drwtNo2":23,"drwtNo3":29,"drwtNo1":10}
+
+
+
+
+
+
+
+
+
+
+
+
+
