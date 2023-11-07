@@ -24,7 +24,7 @@ namespace ParkingCarManager
                 foreach(DataRow item in DBHelper.dt.Rows)
                 {
                     ParkingCar car = new ParkingCar();
-                    car.parkingSpot = item["parkingSpot"].ToString();
+                    car.parkingSpot = item["parkingspot"].ToString();
                     car.carNumber = item["carNumber"].ToString();
                     car.driverName = item["driverName"].ToString();
                     car.phoneNumber = item["phoneNumber"].ToString();

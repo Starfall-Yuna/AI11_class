@@ -48,7 +48,7 @@ namespace ParkingCarManager
         public static SqlDataAdapter da;
         public static DataSet ds;
         public static DataTable dt;
-        private const string TABLENAME = "parkingCarManager";//테이블명
+        private const string TABLENAME = " parkingCarManager ";//테이블명
         //DB 연결하는 메서드
         private static void ConnectDB()
         {
