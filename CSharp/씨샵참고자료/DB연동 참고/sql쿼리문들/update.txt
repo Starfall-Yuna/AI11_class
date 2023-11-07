@@ -1,0 +1,1 @@
+update MYDB1.dbo.TB_CUST set BIRTH_DT = '9999966' where BIRTH_DT = '19770430  '
