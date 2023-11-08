@@ -86,8 +86,9 @@ namespace ParkingCarManager
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                Console.WriteLine(ex.StackTrace);
+                DataManager.printLog("select");
+                DataManager.printLog(ex.Message);
+                DataManager.printLog(ex.StackTrace);
             }
             finally
             {
@@ -98,19 +99,85 @@ namespace ParkingCarManager
         public static void updateQuery(string parkingSpot,string carNumber,
             string driverName,string phoneNumber,bool isRemove)
         {
-
+            try
+            {
+                ConnectDB();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandType = CommandType.Text;
+                string sql = "";
+                if(isRemove) //출차
+                {
+                    sql = $"update {TABLENAME} set carnumber=''," +
+                        $"drivername='',phonenumber='',parkingtime=null " +
+                        $"where parkingspot=@p1"; 
+                    //sql injection(sql 삽입) 공격을 방지하기 위함
+                    //java에서나 c#에서나 이런식으로 우회해서 매개변수 삽입하는 걸
+                    //권장사항으로 함
+                    //sql injection : 로그인 등을 할 때 엉뚱한 sql문을 의도적으로
+                    //(악의적으로)삽입하여 비밀번호 등의 중요 정보가 노출되게 
+                    //하는 해킹 공격
+                    cmd.Parameters.AddWithValue("@p1", parkingSpot);
+                }
+                else
+                {
+                    sql = $"update {TABLENAME} set carnumber=@p1," +
+                        $"drivername=@p2, phonenumber=@p3," +
+                        $"parkingtime=@p4 where " +
+                        $"parkingspot=@p5";
+                    cmd.Parameters.AddWithValue("@p1", carNumber);
+                    cmd.Parameters.AddWithValue("@p2", driverName);
+                    cmd.Parameters.AddWithValue("@p3", phoneNumber);
+                    cmd.Parameters.AddWithValue("@p4", DateTime.Now.ToString
+                        ("yyyy-MM-dd HH:mm:ss.fff"));
+                    cmd.Parameters.AddWithValue("@p5", parkingSpot);
+                }
+                cmd.CommandText = sql;
+                cmd.ExecuteNonQuery();//업데이트문 실행
+            }
+            catch (Exception e)
+            {
+                DataManager.printLog("update," + e.Message + e.StackTrace);
+            }
+            finally
+            { 
+                conn.Close(); 
+            }
         }
+        //주차 공간 추가/삭제에 쓰일 쿼리문
         private static void executeQuery(string ps, string cmd)
         {
-
+            string command = "";
+            if (cmd.Equals("insert"))
+                command = $"insert into {TABLENAME}(parkingspot) values (@p1)";
+            else
+                command = $"delete from {TABLENAME} where parkingspot=@p1";
+            try
+            {
+                ConnectDB();
+                SqlCommand sqlcmd = new SqlCommand();
+                sqlcmd.Connection = conn ;
+                sqlcmd.CommandType = CommandType.Text ;
+                sqlcmd.Parameters.AddWithValue("@p1", ps);
+                sqlcmd.CommandText = command ;
+                sqlcmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                DataManager.printLog(cmd + "," + e.Message + "\n" + e.StackTrace);
+            }
+            finally
+            {
+                conn.Close ();
+            }
         }
         public static void deleteQuery(string ps)
         {
-
+            executeQuery(ps, "delete");
         }
         public static void insertQuery(string ps)
         {
-
+            executeQuery(ps, "insert");
         }
     }
 }
