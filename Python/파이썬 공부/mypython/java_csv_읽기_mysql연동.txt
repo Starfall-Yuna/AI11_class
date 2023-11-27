@@ -1,0 +1,59 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        String csvFile = "data.csv";
+        String line = "";
+        String cvsSplitBy = ",";
+        boolean isStart = true;
+        ArrayList<String[]> mydata = new ArrayList<String[]>();
+
+        try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
+            while ((line = br.readLine()) != null) {
+                if (isStart) {
+                    isStart = false;
+                    continue;
+                } else {
+                    String[] data = line.split(cvsSplitBy);
+                    mydata.add(data);
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        for (String[] item : mydata) {
+            for (String element : item) {
+                System.out.print(element + " ");
+            }
+            System.out.println();
+        }
+
+        String sql = "insert into mybook values(?, ?, ?)";
+
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection conn = DriverManager.getConnection(
+                    "jdbc:mysql://localhost:3306/myproject?serverTimezone=UTC",
+                    "root", "1234");
+
+            for (String[] item : mydata) {
+                PreparedStatement pstmt = conn.prepareStatement(sql);
+                pstmt.setInt(1, Integer.parseInt(item[0]));
+                pstmt.setString(2, item[1]);
+                pstmt.setInt(3, Integer.parseInt(item[6].replace(",", "")));
+                pstmt.executeUpdate();
+            }
+
+            conn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}

@@ -1,0 +1,73 @@
+import requests, json
+from flask import Flask,request,jsonify,abort
+import sys
+application = Flask(__name__)
+
+
+@application.route("/")
+def hello():
+    return "Hello goorm!"
+
+@application.route("/a")
+def helloa():
+    return "Hello goorma!"
+
+# 개발자도구->챗봇api설정->webhook
+@application.route("/mytalk", methods=['POST'])
+def mytalk():
+    #print('request')
+    #print(request)
+    
+    print('request get json')
+    print(request.get_json()) # 이걸로 찍어봐야 한다.
+    
+    # 개발자도구->챗봇api설정->webhook
+    authorization_key = '5YlPTtw4SrqjmQXLieja'
+    
+    headers = {
+        'Content-Type' : 'application/json;charset=UTF-8',
+        'Authorization' : authorization_key
+    }
+
+    """
+        {'event': 'send', 'user': 'LkUTPa3r7TiF_hqymXT8AQ', 'messageId': 39, 'textContent': {'text': 'aslkdfjslakdjflkasjdflsjdlfsd', 'inputType': 'typin
+    g'}, 'options': {'noReflectBot': False, 'mobile': False}}
+    """
+    getReqJson = request.get_json()
+    print('getReqJson : %s' % getReqJson)
+    #print('user_key : '.join( getReqJson['user']))
+    print('user_key : %s' % ( getReqJson['user']))
+    user_key = getReqJson['user']
+    #user_key = 'LkUTPa3r7TiF_hqymXT8AQ'
+    '''data = {
+        'event' : 'send',
+        'user':user_key,
+        'textContent':{'text':'Hello World!'}
+    }
+    '''
+    data = {
+        'event':"send",
+        'user':user_key,
+        "imageContent" : {
+            "imageUrl":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Naver_Logotype.svg/1280px-Naver_Logotype.svg.png"
+        }
+    }
+    message = json.dumps(data)
+    response = requests.post('https://gw.talk.naver.com/chatbot/v1/event',
+                            headers=headers,
+                            data=message)
+
+    print('requests')
+    print(requests)
+    print('response')
+    print(response)
+    print('message')
+    print(message)
+    print('response.status_code')
+    print(response.status_code)
+    print('response.text')
+    print(response.text)
+
+
+if __name__ == "__main__":
+    application.run(host='0.0.0.0', port=5000)

@@ -1,0 +1,20 @@
+import csv #csv에 연관된 걸 읽어옴
+
+#f라는 변수에 파일 정보를 넣는다.
+f = open('data.csv', 'r', encoding='utf-8')
+rdr = csv.reader(f) #rdr이라는 변수에 파일에 있는
+#내용들을 넣는다.
+#count = 0
+isStart = True
+mydata=[]
+for line in rdr:
+    #if count==0: #처음 한 줄은 안 읽으려고 함
+    if isStart:
+        isStart=False
+        pass
+    else:
+        mydata.append(line)
+    #count+=1
+for item in mydata:
+    print(item)
+f.close() #파일 닫아줌

@@ -1,0 +1,809 @@
+{
+  "currentCount": 100,
+  "data": [
+    {
+      "가격": 13000,
+      "발행년": 2020,
+      "발행자": "Barefoot Books",
+      "서명": "Five Little Mermaids",
+      "연번": 1,
+      "저작자": "by Sunny Scribens ; illustrated by Barbara Vagnozzi"
+    },
+    {
+      "가격": 12000,
+      "발행년": 2018,
+      "발행자": "Mathew Price",
+      "서명": "Knock! Knock! Knock",
+      "연번": 2,
+      "저작자": "by Mathew Price,illustrated by Atsuko Morozumi"
+    },
+    {
+      "가격": 13000,
+      "발행년": 2019,
+      "발행자": "Barefoot Books",
+      "서명": "Let's Celebrate! : Special Days Around The World",
+      "연번": 3,
+      "저작자": "by Kate DePalma ; illustrated by Martina Peluso"
+    },
+    {
+      "가격": 12000,
+      "발행년": 2002,
+      "발행자": "Dragonfly Books",
+      "서명": "Let's Make Rabbits",
+      "연번": 4,
+      "저작자": "by Leo Lionni"
+    },
+    {
+      "가격": 23840,
+      "발행년": 2019,
+      "발행자": "Andersen Press Ltd",
+      "서명": "(The) undefeated",
+      "연번": 5,
+      "저작자": "by Kwame Alexander ; illustrated by Kadir Nelson ; illustrated by Kadir Nelson"
+    },
+    {
+      "가격": 26980,
+      "발행년": 2015,
+      "발행자": "Harper, an imprint of HarperCollins Publishers",
+      "서명": "Pete the cat and the bedtime blues",
+      "연번": 6,
+      "저작자": "by Kimberly Dean ; illustrated by James Dean"
+    },
+    {
+      "가격": 26980,
+      "발행년": 2015,
+      "발행자": "Harper, an imprint of HarperCollins Publishers",
+      "서명": "Pete the cat and the cool cat boogie",
+      "연번": 7,
+      "저작자": "by Kimberly Dean ; illustrated by James Dean"
+    },
+    {
+      "가격": 26980,
+      "발행년": 2016,
+      "발행자": "HarperFestival",
+      "서명": "Pete the Cat and the Missing Cupcakes",
+      "연번": 8,
+      "저작자": "by Kimberly Dean ; iliustrated by James Dean"
+    },
+    {
+      "가격": 26980,
+      "발행년": 2014,
+      "발행자": "Harper",
+      "서명": "Pete the cat and the new guy",
+      "연번": 9,
+      "저작자": "by Kimberly Dean ; illustrated by James Dean"
+    },
+    {
+      "가격": 22400,
+      "발행년": 2017,
+      "발행자": "HarperFestival",
+      "서명": "Pete the cat Five little ducks",
+      "연번": 10,
+      "저작자": "by James Dean"
+    },
+    {
+      "가격": 22400,
+      "발행년": 2015,
+      "발행자": "HarperFestival",
+      "서명": "Pete the cat Five Little Pumpkins",
+      "연번": 11,
+      "저작자": "by James Dean"
+    },
+    {
+      "가격": 26980,
+      "발행년": 2018,
+      "발행자": "HarperCollins",
+      "서명": "Pete the kitty and the groovy playdate",
+      "연번": 12,
+      "저작자": "by Dean Kim ; illustrated James Dean"
+    },
+    {
+      "가격": 22400,
+      "발행년": 2016,
+      "발행자": "HarperFestival",
+      "서명": "Pete the Cat's got class",
+      "연번": 13,
+      "저작자": "by James Dean"
+    },
+    {
+      "가격": 14200,
+      "발행년": 2017,
+      "발행자": "Albury Books",
+      "서명": "(A) Rumpus in the Night",
+      "연번": 14,
+      "저작자": "by Nick Ward"
+    },
+    {
+      "가격": 11000,
+      "발행년": 2015,
+      "발행자": "Random House:Language World[배포]",
+      "서명": "(The) absent author",
+      "연번": 15,
+      "저작자": "by Ron Roy ; illustrated by John Steven Gurney"
+    },
+    {
+      "가격": 11000,
+      "발행년": 2015,
+      "발행자": "Random House:Language World[배포]",
+      "서명": "(The) bald bandit",
+      "연번": 16,
+      "저작자": "by Ron Roy ; illustrated by John Steven Gurney"
+    },
+    {
+      "가격": 11000,
+      "발행년": 2015,
+      "발행자": "Random House:Language World[배포]",
+      "서명": "(The) canary caper",
+      "연번": 17,
+      "저작자": "by Ron Roy ; illustrated by John Steven Gurney"
+    },
+    {
+      "가격": 11000,
+      "발행년": 2015,
+      "발행자": "Random House:Language World[배포]",
+      "서명": "(The) deadly dungeon",
+      "연번": 18,
+      "저작자": "by Ron Roy ; illustrated by John Steven Gurney"
+    },
+    {
+      "가격": 11000,
+      "발행년": 2015,
+      "발행자": "Random House:Language World[배포]",
+      "서명": "(The) empty envelope",
+      "연번": 19,
+      "저작자": "by Ron Roy ; illustrated by John Steven Gurney"
+    },
+    {
+      "가격": 11000,
+      "발행년": 2015,
+      "발행자": "Random House:Language World[배포]",
+      "서명": "(The) falcon's feathers",
+      "연번": 20,
+      "저작자": "by Ron Roy ; illustrated by John Steven Gurney"
+    },
+    {
+      "가격": 11000,
+      "발행년": 2015,
+      "발행자": "Random House:Language World[배포]",
+      "서명": "(The) goose's gold",
+      "연번": 21,
+      "저작자": "by Ron Roy ; illustrated by John Steven Gurney"
+    },
+    {
+      "가격": 11000,
+      "발행년": 2015,
+      "발행자": "Random House:Language World[배포]",
+      "서명": "(The) haunted hotel",
+      "연번": 22,
+      "저작자": "by Ron Roy ; illustrated by John Steven Gurney"
+    },
+    {
+      "가격": 11000,
+      "발행년": 2015,
+      "발행자": "Random House:Language World[배포]",
+      "서명": "(The) invisible island",
+      "연번": 23,
+      "저작자": "by Ron Roy ; illustrated by John Steven Gurney"
+    },
+    {
+      "가격": 11000,
+      "발행년": 2015,
+      "발행자": "Random House:Language World[배포]",
+      "서명": "(The) jaguar's jewel",
+      "연번": 24,
+      "저작자": "by Ron Roy ; illustrated by John Steven Gurney"
+    },
+    {
+      "가격": 11000,
+      "발행년": 2015,
+      "발행자": "Random House:Language World[배포]",
+      "서명": "(The) kidnapped king",
+      "연번": 25,
+      "저작자": "by Ron Roy ; illustrated by John Steven Gurney"
+    },
+    {
+      "가격": 11000,
+      "발행년": 2015,
+      "발행자": "Random House:Language World[배포]",
+      "서명": "(The) lucky lottery",
+      "연번": 26,
+      "저작자": "by Ron Roy ; illustrated by John Steven Gurney"
+    },
+    {
+      "가격": 11000,
+      "발행년": 2015,
+      "발행자": "Random House:Language World[배포]",
+      "서명": "(The) missing mummy",
+      "연번": 27,
+      "저작자": "by Ron Roy ; illustrated by John Steven Gurney"
+    },
+    {
+      "가격": 11000,
+      "발행년": 2015,
+      "발행자": "Random House:Language World[배포]",
+      "서명": "(The) ninth nugget",
+      "연번": 28,
+      "저작자": "by Ron Roy ; illustrated by John Steven Gurney"
+    },
+    {
+      "가격": 11000,
+      "발행년": 2015,
+      "발행자": "Random House:Language World[배포]",
+      "서명": "(The) orange outlaw",
+      "연번": 29,
+      "저작자": "by Ron Roy ; illustrated by John Steven Gurney"
+    },
+    {
+      "가격": 11000,
+      "발행년": 2015,
+      "발행자": "Random House:Language World[배포]",
+      "서명": "(The) panda puzzle",
+      "연번": 30,
+      "저작자": "by Ron Roy ; illustrated by John Steven Gurney"
+    },
+    {
+      "가격": 11000,
+      "발행년": 2015,
+      "발행자": "Random House:Language World[배포]",
+      "서명": "(The) quicksand question",
+      "연번": 31,
+      "저작자": "by Ron Roy ; illustrated by John Steven Gurney"
+    },
+    {
+      "가격": 11000,
+      "발행년": 2015,
+      "발행자": "Random House:Language World[배포]",
+      "서명": "(The) runaway racehorse",
+      "연번": 32,
+      "저작자": "by Ron Roy ; illustrated by John Steven Gurney"
+    },
+    {
+      "가격": 11000,
+      "발행년": 2015,
+      "발행자": "Random House:Language World[배포]",
+      "서명": "(The) school skeleton",
+      "연번": 33,
+      "저작자": "by Ron Roy ; illustrated by John Steven Gurney"
+    },
+    {
+      "가격": 11000,
+      "발행년": 2015,
+      "발행자": "Random House:Language World[배포]",
+      "서명": "(The) talking T. rex",
+      "연번": 34,
+      "저작자": "by Ron Roy ; illustrated by John Steven Gurney"
+    },
+    {
+      "가격": 11000,
+      "발행년": 2015,
+      "발행자": "Random House:Language World[배포]",
+      "서명": "(The) unwilling umpire",
+      "연번": 35,
+      "저작자": "by Ron Roy ; illustrated by John Steven Gurney"
+    },
+    {
+      "가격": 11000,
+      "발행년": 2015,
+      "발행자": "Random House:Language World[배포]",
+      "서명": "(The) vampire's vacation",
+      "연번": 36,
+      "저작자": "by Ron Roy ; illustrated by John Steven Gurney"
+    },
+    {
+      "가격": 11000,
+      "발행년": 2015,
+      "발행자": "Random House:Language World[배포]",
+      "서명": "(The) white wolf",
+      "연번": 37,
+      "저작자": "by Ron Roy ; illustrated by John Steven Gurney"
+    },
+    {
+      "가격": 11000,
+      "발행년": 2015,
+      "발행자": "Random House:Language World[배포]",
+      "서명": "(The) X'ed-out X-ray",
+      "연번": 38,
+      "저작자": "by Ron Roy ; illustrated by John Steven Gurney"
+    },
+    {
+      "가격": 11000,
+      "발행년": 2015,
+      "발행자": "Random House:Language World[배포]",
+      "서명": "(The) yellow yacht",
+      "연번": 39,
+      "저작자": "by Ron Roy ; illustrated by John Steven Gurney"
+    },
+    {
+      "가격": 11000,
+      "발행년": 2015,
+      "발행자": "Random House:Language World[배포]",
+      "서명": "(The) zombie zone",
+      "연번": 40,
+      "저작자": "by Ron Roy ; illustrated by John Steven Gurney"
+    },
+    {
+      "가격": 17800,
+      "발행년": 2015,
+      "발행자": "Maverick Arts Publishing",
+      "서명": "Aerodynamics of biscuits",
+      "연번": 41,
+      "저작자": "Written by Clare Helen Welsh ; illustrated by Sophia Touliatou"
+    },
+    {
+      "가격": 16400,
+      "발행년": 2018,
+      "발행자": "Red Fox",
+      "서명": "Alfie and Grandma",
+      "연번": 42,
+      "저작자": "by Shirley Hughes"
+    },
+    {
+      "가격": 17800,
+      "발행년": 2017,
+      "발행자": "Orchard",
+      "서명": "All I want for Christmas",
+      "연번": 43,
+      "저작자": "by Rachel Bright"
+    },
+    {
+      "가격": 30000,
+      "발행년": 2017,
+      "발행자": "Archaia",
+      "서명": "(An) apple and an adventure",
+      "연번": 44,
+      "저작자": "by Martin Cendreda"
+    },
+    {
+      "가격": 28000,
+      "발행년": 2015,
+      "발행자": "EK books",
+      "서명": "(An) English year : twelve months in the life of england's kids",
+      "연번": 45,
+      "저작자": "by Tania Mccartney ; illustrated by Tina Snerling"
+    },
+    {
+      "가격": 29700,
+      "발행년": 2018,
+      "발행자": "Walker Books",
+      "서명": "Animals with tiny cat",
+      "연번": 46,
+      "저작자": "by Viviane Schwarz"
+    },
+    {
+      "가격": 30000,
+      "발행년": 2012,
+      "발행자": "Abrams Appleseed",
+      "서명": "Apple",
+      "연번": 47,
+      "저작자": "by Nikki McClure"
+    },
+    {
+      "가격": 29700,
+      "발행년": 2016,
+      "발행자": "Flying Eye Books",
+      "서명": "Archie Snufflekins Oliver Valentine Cupcake Tiberius Cat",
+      "연번": 48,
+      "저작자": "by Katie Harnett"
+    },
+    {
+      "가격": 32900,
+      "발행년": 2014,
+      "발행자": "Chronicle Books",
+      "서명": "Planet Kindergarten",
+      "연번": 49,
+      "저작자": "Sue Ganz-Schmitt ; Shane Prigmore"
+    },
+    {
+      "가격": 16400,
+      "발행년": 2000,
+      "발행자": "Little Tiger Press",
+      "서명": "Are you there, baby bear",
+      "연번": 50,
+      "저작자": "Catherine Walters"
+    },
+    {
+      "가격": 19300,
+      "발행년": 2014,
+      "발행자": "Albury Books",
+      "서명": "At the waterhole",
+      "연번": 51,
+      "저작자": "Beth Shoshan ; Piers Harper"
+    },
+    {
+      "가격": 28900,
+      "발행년": 2000,
+      "발행자": "Henry Holt",
+      "서명": "Baby steps",
+      "연번": 52,
+      "저작자": "Peter McCarty"
+    },
+    {
+      "가격": 16400,
+      "발행년": 2015,
+      "발행자": "Walker Books",
+      "서명": "Baby's got the blues",
+      "연번": 53,
+      "저작자": "Carol Diggory Shields ; Lauren Tobia"
+    },
+    {
+      "가격": 29700,
+      "발행년": 1996,
+      "발행자": "Andersen",
+      "서명": "Badger's parting gifts",
+      "연번": 54,
+      "저작자": "by Susan Varley"
+    },
+    {
+      "가격": 21500,
+      "발행년": 2019,
+      "발행자": "Little Brown & Co",
+      "서명": "Bear came along",
+      "연번": 55,
+      "저작자": "Richard T. Morris ; LeUyen Pham"
+    },
+    {
+      "가격": 14200,
+      "발행년": 2017,
+      "발행자": "Hogs Back Books",
+      "서명": "Bella's Bubble",
+      "연번": 56,
+      "저작자": "Karen Hodgson ; Rebecca Griffiths"
+    },
+    {
+      "가격": 17800,
+      "발행년": 2012,
+      "발행자": "Pavilion Children's",
+      "서명": "Bella's butterfly ball",
+      "연번": 57,
+      "저작자": "Anna Nilsen ; Joanne Partis"
+    },
+    {
+      "가격": 27900,
+      "발행년": 2017,
+      "발행자": "Chronicle Books",
+      "서명": "Betty's burgled bakery : an alliteration adventure",
+      "연번": 58,
+      "저작자": "by Travis Nichols"
+    },
+    {
+      "가격": 30000,
+      "발행년": 2016,
+      "발행자": "Roaring Brook Press",
+      "서명": "Black  white! day  night! : (A) book of opposites",
+      "연번": 59,
+      "저작자": "by Laura Vaccaro Seeger"
+    },
+    {
+      "가격": 15300,
+      "발행년": 2010,
+      "발행자": "Barron's",
+      "서명": "Blow Air",
+      "연번": 60,
+      "저작자": "Nuria Jime nez,Empar Jime nez ; Rosa M Curto"
+    },
+    {
+      "가격": 19300,
+      "발행년": 2016,
+      "발행자": "Igloo Books Ltd",
+      "서명": "Boy Who Said No",
+      "연번": 61,
+      "저작자": "wortten by Charlie Griffin ; illustrated by Kathryn Durst"
+    },
+    {
+      "가격": 16400,
+      "발행년": 2013,
+      "발행자": "Orchard Books",
+      "서명": "Bumpus Jumpus Dinosaurumpus",
+      "연번": 62,
+      "저작자": "by Tony Mitton ; illustrated by Guy Parker-Rees"
+    },
+    {
+      "가격": 31900,
+      "발행년": 2017,
+      "발행자": "Farrar, Straus and Giroux",
+      "서명": "Bunny Bus",
+      "연번": 63,
+      "저작자": "by Ammi-Joan Paquette ; pictures by Leslie Breen Withrow"
+    },
+    {
+      "가격": 29700,
+      "발행년": 2017,
+      "발행자": "Walker Books Ltd",
+      "서명": "(The) Cat Book : A Minibombo Book",
+      "연번": 64,
+      "저작자": "by Silvia Borando"
+    },
+    {
+      "가격": 29900,
+      "발행년": 2016,
+      "발행자": "Feiwel and Friends",
+      "서명": "Cat knit",
+      "연번": 65,
+      "저작자": "by Jacob Grant"
+    },
+    {
+      "가격": 29700,
+      "발행년": 2009,
+      "발행자": "Frances Lincoln Children's Books",
+      "서명": "Cezanne and The Apple Boy",
+      "연번": 66,
+      "저작자": "by Laurence Anholt"
+    },
+    {
+      "가격": 16400,
+      "발행년": 2013,
+      "발행자": "Little Tiger Press",
+      "서명": "Chameleon's Crazy Colours",
+      "연번": 67,
+      "저작자": "by Nicola Grant ; illustrated by Michael Terry"
+    },
+    {
+      "가격": 14200,
+      "발행년": 2018,
+      "발행자": "Macmillan Children's Books",
+      "서명": "Charlie Crow in the Snow",
+      "연번": 68,
+      "저작자": "by Paula Metcalf ; illustrated by Cally Johnson-Isaacs"
+    },
+    {
+      "가격": 18550,
+      "발행년": 2019,
+      "발행자": "Candlewick Press",
+      "서명": "Smell My Foot",
+      "연번": 69,
+      "저작자": "by Cece Bell"
+    },
+    {
+      "가격": 14200,
+      "발행년": 2018,
+      "발행자": "Bonney Press",
+      "서명": "Chomp Goes to School",
+      "연번": 70,
+      "저작자": "written by Melissa Mattox ; illustrated by Mark Chambers"
+    },
+    {
+      "가격": 17300,
+      "발행년": 2015,
+      "발행자": "Candlewick Press",
+      "서명": "Christmas Tree",
+      "연번": 71,
+      "저작자": "by David Martin ; illustrasted by Melissa Sweet"
+    },
+    {
+      "가격": 17800,
+      "발행년": 2016,
+      "발행자": "Scholastic",
+      "서명": "Cinderella and her very bossy sisters",
+      "연번": 72,
+      "저작자": "written by Mark Sperring ; illustrated by Barbara Bongini"
+    },
+    {
+      "가격": 15300,
+      "발행년": 2018,
+      "발행자": "Barron's",
+      "서명": "Click Energy",
+      "연번": 73,
+      "저작자": "by Nuria Jimenez,Empar Jimenez ; illustrated by Rosa M. Curtoe"
+    },
+    {
+      "가격": 31900,
+      "발행년": 2010,
+      "발행자": "Feiwel and Friends",
+      "서명": "Cooking with Henry and Elliebelly",
+      "연번": 74,
+      "저작자": "by Carolyn Parkhurst ; illustrated by Dan Yaccarino"
+    },
+    {
+      "가격": 29700,
+      "발행년": 2014,
+      "발행자": "Simon & Schuster Children's",
+      "서명": "Crayon",
+      "연번": 75,
+      "저작자": "by Simon Rickerty"
+    },
+    {
+      "가격": 16400,
+      "발행년": 2018,
+      "발행자": "Scholastic",
+      "서명": "Daddies are great!",
+      "연번": 76,
+      "저작자": "by Meredith Costain ; illustrated by Polona Lovsin"
+    },
+    {
+      "가격": 20300,
+      "발행년": 2019,
+      "발행자": "Maverick",
+      "서명": "Daddy and I",
+      "연번": 77,
+      "저작자": "by Lou Treleaven ; illustrated by Sophie Burrows"
+    },
+    {
+      "가격": 29000,
+      "발행년": 2010,
+      "발행자": "Cartwheel Books:Scholastic Inc",
+      "서명": "Daddy's little scout",
+      "연번": 78,
+      "저작자": "by Janet Bingham ; illustrated by Rosalind Beardshaw"
+    },
+    {
+      "가격": 29700,
+      "발행년": 2009,
+      "발행자": "Barron's Educational Series",
+      "서명": "Dandylion",
+      "연번": 79,
+      "저작자": "by Lizzie Finlay"
+    },
+    {
+      "가격": 17800,
+      "발행년": 2017,
+      "발행자": "Bloomsbury Children's Books",
+      "서명": "Digger Disaster",
+      "연번": 80,
+      "저작자": "by Rose Impey"
+    },
+    {
+      "가격": 16400,
+      "발행년": 2017,
+      "발행자": "Faber Children's Books",
+      "서명": "Dinosaur Rhyme Time",
+      "연번": 81,
+      "저작자": "by Valentina Mendicino"
+    },
+    {
+      "가격": 19300,
+      "발행년": 2015,
+      "발행자": "Ticktock",
+      "서명": "Dirty Rotten Rulers",
+      "연번": 82,
+      "저작자": "by Jim Pipe ; illustrated by Mauro Mazzara"
+    },
+    {
+      "가격": 20300,
+      "발행년": 2016,
+      "발행자": "Old Barn Books",
+      "서명": "Dog on a train : the special delivery",
+      "연번": 83,
+      "저작자": "by Kate Prendergast"
+    },
+    {
+      "가격": 31900,
+      "발행년": 2015,
+      "발행자": "Little Bee Books",
+      "서명": "Don't kick up a fuss, gus!",
+      "연번": 84,
+      "저작자": "by Adria Meserve"
+    },
+    {
+      "가격": 20300,
+      "발행년": 2018,
+      "발행자": "Nosy Crow",
+      "서명": "Don't wake up tiger!",
+      "연번": 85,
+      "저작자": "by Britta Teckentrup"
+    },
+    {
+      "가격": 21500,
+      "발행년": 2019,
+      "발행자": "Alfred a Knopf",
+      "서명": "Double bass blues",
+      "연번": 86,
+      "저작자": "by Andrea J. Loney ; illutrated by Rudy Gutierrez"
+    },
+    {
+      "가격": 29700,
+      "발행년": 2017,
+      "발행자": "Walker Books",
+      "서명": "Double Take : a new look at opposites",
+      "연번": 87,
+      "저작자": "by Susan Hood ; illustrated by Jay Fleck"
+    },
+    {
+      "가격": 29900,
+      "발행년": 2008,
+      "발행자": "Henry Holt",
+      "서명": "Duck Dunks",
+      "연번": 88,
+      "저작자": "by Lynne Berry ; illustrated by Hiroe Nakata"
+    },
+    {
+      "가격": 31900,
+      "발행년": 2014,
+      "발행자": "Henry Holt and Co",
+      "서명": "Edda : (A) Little Valkyrie's First Day of School",
+      "연번": 89,
+      "저작자": "by Adam Auerbach"
+    },
+    {
+      "가격": 29700,
+      "발행년": 2017,
+      "발행자": "Walker Books",
+      "서명": "Ellie and Lump's very busy day",
+      "연번": 90,
+      "저작자": "by Dorothy Clark ; illustrated by Palmer Becky"
+    },
+    {
+      "가격": 31900,
+      "발행년": 2016,
+      "발행자": "Henry Hol",
+      "서명": "Emerson Barks",
+      "연번": 91,
+      "저작자": "by Liza Woodruff"
+    },
+    {
+      "가격": 16400,
+      "발행년": 2014,
+      "발행자": "Walker Books Ltd",
+      "서명": "Emily Peppermint's Toy School",
+      "연번": 92,
+      "저작자": "by Jeanne Willis ; illustrated by Vanessa Cabban"
+    },
+    {
+      "가격": 28000,
+      "발행년": 2019,
+      "발행자": "Igloo Books Ltd",
+      "서명": "Fairy Sprinkles Magic Wand",
+      "연번": 93,
+      "저작자": "by Melanie Joyce ; illustrasted by Nicola Anderson"
+    },
+    {
+      "가격": 17800,
+      "발행년": 2015,
+      "발행자": "Top That",
+      "서명": "Fame mouse",
+      "연번": 94,
+      "저작자": "written by Joshua George ; illustrated by Barbara Bakos"
+    },
+    {
+      "가격": 27900,
+      "발행년": 2018,
+      "발행자": "QED",
+      "서명": "(Find your way) in the jungle",
+      "연번": 95,
+      "저작자": "by Paul Boston"
+    },
+    {
+      "가격": 31700,
+      "발행년": 2018,
+      "발행자": "Farrar Straus Giroux",
+      "서명": "Flo",
+      "연번": 96,
+      "저작자": "story by Kyo Maclear ; pictures by Jay Fleck"
+    },
+    {
+      "가격": 29700,
+      "발행년": 2017,
+      "발행자": "Gecko Press",
+      "서명": "Follow Finn : a search-and-find maze book",
+      "연번": 97,
+      "저작자": "by Peter Goes"
+    },
+    {
+      "가격": 16400,
+      "발행년": 2005,
+      "발행자": "Little Tiger Press",
+      "서명": "Fred and the little egg",
+      "연번": 98,
+      "저작자": "by Julia Rawlinson ; illustrated by Jane Massey"
+    },
+    {
+      "가격": 28000,
+      "발행년": 2013,
+      "발행자": "Feisel&Friends",
+      "서명": "Oh So Tiny bunny",
+      "연번": 99,
+      "저작자": "story and paintings by David Kirk"
+    },
+    {
+      "가격": 17800,
+      "발행년": 2017,
+      "발행자": "Scholastic",
+      "서명": "George's dragon",
+      "연번": 100,
+      "저작자": "by Claire Freedman ; illustrated by Russell Julian"
+    }
+  ],
+  "matchCount": 5076,
+  "page": 1,
+  "perPage": 100,
+  "totalCount": 5076
+}
