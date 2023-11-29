@@ -1,0 +1,73 @@
+공유폴더->AI11_lecture->Python->파이썬공부->20231129 폴더 참고!
+
+1. 네이버든 카카오든 상관없이 현재 자신이 태어난 연도를 입력하면
+그 해가 무슨 해인지 알려주고 그 해에 맞는 동물 캐릭터를 보여준다.
+(그 동물의 색깔까지 보여줄 필욘없음 ㅋㅋ)
+예) 1989 -> 기사년, 뱀그림
+* 하나의 말풍선에 그림과 글을 다 담는 건 불가능할 것이다.
+따라서 응답으로 2개의 말풍선이 오게 된다.
+[아래 힌트들 참고]
+
+2. 자신이 C# 프로젝트때 했던 API 데이터랑 로또 데이터를 응답하게 한다.
+마찬가지로 네이버와 카카오 둘 다 되게 해야 한다.
+(예: 맛집 입력하면 경북 예천 맛집 정보 뿌려주고, 로또 1 이렇게 적으면 로또 1회차의
+번호들을 뿌려준다.)
+
+
+hint1 그림
+카카오 : 
+                    {
+                        "simpleImage" : {
+                            "imageUrl" : '해당 이미지 주소',
+                            "altText" : "Hello"
+                        }
+                    }
+
+네이버 : 
+    data = {
+        'event' : 'send',
+        'user' : user_key,
+        "imageContent" : {
+            "imageUrl" : img
+        }
+        
+    }
+
+hint2 여러 개 보내기
+
+카카오 -> 그림과 글을 둘 다 보낸다.
+                "outputs" : [
+                    {
+                        "simpleImage" : {
+                            "imageUrl" : '해당url',
+                            "altText" : "Hello"
+                        }
+                    }, 
+                    {
+                        'simpleText' : {
+                            'text' : '나도 모르겠다'
+                        }
+                    }
+                ]
+
+네이버 : 
+response = requests.post(
+        'https://gw.talk.naver.com/chatbot/v1/event',
+        headers=headers,
+        data=message)
+
+이걸 여러 번 호출하면 됨
+
+
+
+
+
+
+
+
+
+
+
+
+
+

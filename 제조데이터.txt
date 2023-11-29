@@ -1,0 +1,11 @@
+1. 인공지능 중소벤처 제조 플랫폼
+품질 이상탐지, 진단(도금욕) AI 데이터셋
+https://www.kamp-ai.kr/aidataDetail?AI_SEARCH=&page=2&DATASET_SEQ=21&EQUIP_SEL=&GUBUN_SEL=&FILE_TYPE_SEL=&WDATE_SEL=
+
+2. AI Hub
+부품 품질 검사 영상 데이터(자동차)
+https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=realm&dataSetSn=578
+
+부품 품질 검사 영상 데이터(선박·해양플랜트)
+https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&dataSetSn=579
+
