@@ -49,7 +49,38 @@ def kakaochatbot():
 
 
 @application.route("/hn",methods=["POST"])
-def navertalk():
+def hellonaver():
+    authKey = 'mPyxLHxASBaOemtHkwmQ'
+    headers = {
+        'Content-Type':'application/json;charset=UTF-8',
+        'Authorization':authKey
+    }
+    
+    user_key = request.get_json()['user']
+    mymsg = request.get_json()
+    mymsg = mymsg['textContent']['text']
+    year = int(mymsg)
+    result = TheeInfo(year)
+    data = {
+        'event':'send',
+        'user':user_key,
+        'textContent' : {'text':result[0]+result[1]}
+    }
+    message = json.dumps(data)
+    response = requests.post(
+        'https://gw.talk.naver.com/chatbot/v1/event',
+        headers=headers,
+        data=message)
+    data = {
+        'event':'send',
+        'user':user_key,
+        'imageContent' : {'imageUrl':result[2]}
+    }
+    message = json.dumps(data)
+    response = requests.post(
+        'https://gw.talk.naver.com/chatbot/v1/event',
+        headers=headers,
+        data=message) 
     return None
 
 if __name__ == "__main__":
