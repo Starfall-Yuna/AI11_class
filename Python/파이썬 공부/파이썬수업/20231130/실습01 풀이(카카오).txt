@@ -1,0 +1,56 @@
+import requests, json
+from flask import Flask,request,jsonify,abort
+import sys
+import urllib.request
+import TheeImg
+
+application = Flask(__name__)
+
+def TheeInfo(year):
+    t = TheeImg.TheeImg()
+    imglist = [t.monkey,t.chicken,t.dog,t.pig,t.mouse,t.cow,t.tiger,t.rabbit,t.dragon,t.snake,t.horse,t.sheep]
+    #10으로 나눴을 때 나머지 이용
+    nameList = ["경","신","임","계","갑","을","병","정","무","기"]
+    theeList = ["신","유","술","해","자","축","인","묘","진","사","오","미"]
+    result = [nameList[year%10],theeList[year%12],imglist[year%12]]
+    return result
+
+@application.route("/")
+def hello():
+    return "<h1 style='color:red'>Hello goorm!</h1>"
+
+
+@application.route("/hellokakao",methods=["POST"])
+def kakaochatbot():
+    req = request.get_json()
+    myreq = req["userRequest"]["utterance"]
+    year = int(myreq)
+    result = TheeInfo(year)
+    res = {
+        "version":"2.0",
+        "template":{
+            "outputs" : [
+                {
+                    "simpleText":{
+                        "text":result[0]+result[1]+"년"
+                    }
+                },
+                {
+                    "simpleImage":{
+                        "imageUrl":result[2],
+                        "altText":"대체이미지"
+                    }
+                }
+            ]
+        }
+    }
+    return jsonify(res)
+
+
+
+@application.route("/hn",methods=["POST"])
+def navertalk():
+    return None
+
+if __name__ == "__main__":
+    application.run(host='0.0.0.0', port=5000)
