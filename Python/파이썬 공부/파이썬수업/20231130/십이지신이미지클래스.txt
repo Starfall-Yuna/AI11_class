@@ -1,0 +1,14 @@
+class TheeImg:
+    def __init__(self):
+        self.mouse='https://obj-sg.the1.wiki/d/60/a7/66cd5a0d5529298d9fcbf4d2222346e6e78cf0dfba0987ed83f5048f11d1897c.jpg'
+        self.cow='https://cdn.gjdream.com/news/photo/202103/606518_206177_5256.jpg'
+        self.tiger='https://img.khan.co.kr/news/2022/11/10/news-p.v1.20221110.cc8163b6d247496b9aba4422f9990361.jpg'
+        self.rabbit='https://img.seoul.co.kr/img/upload/2021/04/30/SSI_20210430195948_O2.jpg'
+        self.dragon='https://www.urbanbrush.net/web/wp-content/uploads/edd/2023/03/urban-20230310105713376321.jpg'
+        self.snake='https://obj-kr.the1.wiki/d/cd/e8/546e0c8a7397b3551983824968e4eba30a98a3c53d4851a9af107b7847ba71b6.png'
+        self.horse='https://obj-temp.the1.wiki/data/4351696d6167655feba788ecb488ec9dbceb9facec8aa4ed8ab82e706e67.png'
+        self.sheep='https://obj-temp.the1.wiki/data/4351696d6167655febafb8ebafb8ec9dbceb9facec8aa4ed8ab82e706e67.png'
+        self.monkey='https://obj-sg.the1.wiki/d/10/9f/ab07aa123efd8e6b173c9c63f073867a22db86f3ea6633623573fa546eb3fdf9.png'
+        self.chicken='https://img.sbs.co.kr/newimg/news/20211224/201621538_700.jpg'
+        self.dog='https://obj-sg.the1.wiki/d/28/59/00626f1a7bbaf8a78a32a8ffd828b79ff34897a30112ffc8e71f032fd902fb65.png'
+        self.pig='https://qi-o.qoo10cdn.com/goods_image_big/2/7/1/8/10220422718_l.jpg'

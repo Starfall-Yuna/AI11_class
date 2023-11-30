@@ -1,0 +1,7 @@
+def TheeInfo(year):
+    t = TheeImg.TheeImg()
+    imglist = [t.monkey,t.chicken,t.dog,t.pig,t.mouse,t.cow,t.tiger,t.rabbit,t.dragon,t.snake,t.horse,t.sheep]
+    nameList = ["경","신","임","계","갑","을","병","정","무","기"]
+    theeList = ["신","유","술","해","자","축","인","묘","진","사","오","미"]
+    result = [nameList[year%10],theeList[year%12],imglist[year%12]]
+    return result
