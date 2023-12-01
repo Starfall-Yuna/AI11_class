@@ -1,0 +1,14 @@
+1. python을 버전 10이나 그 이하 설치해야 함 ㅠ
+
+2. 파이참으로 새 프로젝트 만들고 새로 설치한 파이썬으로 버전 맞춰야 함
+
+3. JAVA_HOME 세팅
+C:\Program Files\Java\jdk-11\bin
+
+4. 
+
+python -m pip install --upgrade pip
+
+pip install jpype1
+
+pip install konlpy

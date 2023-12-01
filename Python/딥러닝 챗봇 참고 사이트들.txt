@@ -1,0 +1,5 @@
+저자의 github 주소
+https://github.com/keiraydev/chatbot
+
+저자의 책을 보고 따라한 한 개인 블로거
+https://derekahndev.github.io/machine%20learning/chatbot-1/
