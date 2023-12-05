@@ -18,7 +18,7 @@ labels = data['label'].tolist()#label(감정) 부분만 리스트로 변환 0:�
 # corpus : 말뭉치
 # preprocessing.text.text_to_word_sequence(text)
 # features에 있는 문장을 하나씩 꺼내와서 text 변수에 넣는다.
-# 텐서플로우에 있는 preprocessing 의 text의 text_to_word_sequenc2e 함수를 이용해 단어 시퀀스를 만든다.
+# 텐서플로우에 있는 preprocessing 의 text의 text_to_word_sequence 함수를 이용해 단어 시퀀스를 만든다.
 # 단어 시퀀스 : '3박4일 놀러가고 싶다' => ['3박4일', '놀러가고', '싶다']처럼 단어 토큰들의 순차적 리스트
 # 이 단어 시퀀스를 corpus 라는 이름의 변수(=리스트)에 저장
 corpus = [preprocessing.text.text_to_word_sequence(text) for text in features]
