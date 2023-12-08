@@ -1,0 +1,347 @@
+하드코딩 ver
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<style>
+svg {
+ 
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  fill:skyblue;
+}
+
+#h1 {
+  margin: 0px;
+  text-align: center;
+}
+
+#chart {
+  display: flex;
+  justify-content: center;
+}
+</style>
+</head>
+<body>
+<br>
+<h1 id="h1">현재 대구 날씨에 따른 10일후까지의 기온 예측</h1><br><br>
+
+<div id="chart">
+  <svg width="1300" height="800"></svg>
+</div>
+<script>
+var datas = [
+  { day: "3일 후", value: 31 },
+  { day: "4일 후", value: 27 },
+  { day: "5일 후", value: 27 },
+  { day: "6일 후", value: 29 },
+  { day: "7일 후", value: 29 },
+  { day: "8일 후", value: 29 },
+  { day: "9일 후", value: 28 },
+  { day: "10일 후", value: 28 }
+];
+
+
+var margin = { top: 20, right: 20, bottom: 50, left: 50 };
+var width = 1300 - margin.left - margin.right;
+var height = 800 - margin.top - margin.bottom;
+
+var svg = d3.select("svg")
+.attr("width", width + margin.left + margin.right)
+.attr("height", height + margin.top + margin.bottom)
+
+
+var g = svg.append("g") // 수정: g 요소를 추가하여 그룹 생성
+.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+var xScale=d3.scaleBand()
+.domain(datas.map(function(d){return d.day;}))
+.range([0,width])
+.padding(0.1)
+
+
+
+var yScale=d3.scaleLinear()
+.domain([0,d3.max(datas,function(d){return d.value;})])
+.range([height,0])
+
+var xAxis = d3.axisBottom(xScale);
+var yAxis = d3.axisLeft(yScale);
+
+svg.selectAll("rect")
+.data(datas)
+.enter()
+.append("rect")
+.attr("x",function (d){return xScale(d.day) + xScale.bandwidth() / 3; })
+.attr("y",function (d){return yScale(d.value)+10;})  
+.attr("width", xScale.bandwidth())
+.attr("height", function(d) { return height - yScale(d.value); })
+
+
+g.append("g")
+  .attr("transform", "translate(0," + height + ")")
+  .call(xAxis); // 수정: x축을 그리도록 설정
+
+g.append("g")
+  .call(yAxis);
+  
+
+svg.selectAll(".text")
+.data(datas)
+.enter()
+.append("text")
+ .text(function(d) { return d.value; })
+.attr("x", function(d, i) {return xScale(d.day)+xScale.bandwidth()/1.5;}) //왼쪽오른쪽 조정 숫자가 커질수록 왼쪽으로 감
+.attr("y", function(d, i) { return yScale(d.value) +40;}) //숫자가 작아질수록 위로가고 커질수록 밑으로감
+  .attr("class", "text")
+  .attr("fill", "white")
+  .attr("font-size", "30px")
+  .attr("font-weight", "bold")
+
+ 
+
+
+</script>
+</body>
+</html>
+
+
+
+
+객체 ver
+
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<style>
+svg {
+ 
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  fill:skyblue;
+}
+
+#h1 {
+  margin: 0px;
+  text-align: center;
+}
+
+#chart {
+  display: flex;
+  justify-content: center;
+}
+</style>
+</head>
+<body>
+<br>
+<h1 id="h1">현재 대구 날씨에 따른 10일후까지의 기온 예측</h1><br><br>
+
+<div id="chart">
+  <svg width="1300px" height="800px"></svg>
+</div>
+<script>
+
+var taMax3 = "${data['taMax3']}"
+var taMax4 ="${data['taMax4']}"
+var taMax5 = "${data['taMax5']}"
+var taMax6 = "${data['taMax6']}"
+var taMax7 = "${data['taMax7']}"
+var taMax8 = "${data['taMax8']}"
+var taMax9 = "${data['taMax9']}"
+var taMax10 ="${data['taMax10']}"
+
+
+
+
+var datas = [
+  { day: "3일 후", value: taMax3 },
+  { day: "4일 후", value: taMax4 },
+  { day: "5일 후", value: taMax5 },
+  { day: "6일 후", value: taMax6 },
+  { day: "7일 후", value: taMax7 },
+  { day: "8일 후", value: taMax8 },
+  { day: "9일 후", value: taMax9 },
+  { day: "10일 후", value: taMax10 }
+];
+
+
+var margin = { top: 20, right: 20, bottom: 50, left: 50 };
+var width = 1300 - margin.left - margin.right;
+var height = 800 - margin.top - margin.bottom;
+
+var svg = d3.select("svg")
+.attr("width", width + margin.left + margin.right)
+.attr("height", height + margin.top + margin.bottom)
+
+
+var g = svg.append("g") // 수정: g 요소를 추가하여 그룹 생성
+.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+var xScale=d3.scaleBand()
+.domain(datas.map(function(d){return d.day;}))
+.range([0,width])
+.padding(0.1)
+
+
+
+var yScale=d3.scaleLinear()
+.domain([0,d3.max(datas,function(d){return d.value;})])
+.range([height,0])
+
+var xAxis = d3.axisBottom(xScale);
+var yAxis = d3.axisLeft(yScale);
+
+svg.selectAll("rect")
+.data(datas)
+.enter()
+.append("rect")
+.attr("x",function (d){return xScale(d.day) + xScale.bandwidth() / 3; })
+.attr("y",function (d){return yScale(d.value)+10;})  
+.attr("width", xScale.bandwidth())
+.attr("height", function(d) { return height - yScale(d.value); })
+
+
+g.append("g")
+  .attr("transform", "translate(0," + height + ")")
+  .call(xAxis); // 수정: x축을 그리도록 설정
+
+g.append("g")
+  .call(yAxis);
+  
+
+svg.selectAll(".text")
+.data(datas)
+.enter()
+.append("text")
+ .text(function(d) { return d.value; })
+.attr("x", function(d, i) {return xScale(d.day)+xScale.bandwidth()/1.5;}) //왼쪽오른쪽 조정 숫자가 커질수록 왼쪽으로 감
+.attr("y", function(d, i) { return yScale(d.value) +40;}) //숫자가 작아질수록 위로가고 커질수록 밑으로감
+  .attr("class", "text")
+  .attr("fill", "white")
+  .attr("font-size", "30px")
+  .attr("font-weight", "bold")
+
+ 
+
+
+</script>
+</body>
+</html>
+
+
+---
+
+
+웨더 컨트롤러
+package com.myproject.controller;
+
+import com.myproject.service.WeatherService;
+
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class WeatherController {
+	@Autowired
+	WeatherService WeatherService;
+	
+	@RequestMapping(value="/weather_info")
+	public ModelAndView products(@RequestParam Map<String, Object> map){
+		ModelAndView mav = new ModelAndView();
+		Map<String,Object> list = this.WeatherService.SelectWeather(map);	
+		mav.addObject("data",list);
+		mav.setViewName("weather/weather_info");
+		return mav;
+	}	
+	
+	
+}
+
+
+
+웨더 다오
+package com.myproject.dao;
+
+import java.util.Map;
+
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class WeatherDAO {
+	
+	@Autowired
+	SqlSessionTemplate SqlSessionTemplate;
+	
+	public Map<String,Object> SelectWeather(Map<String,Object> map){
+		return this.SqlSessionTemplate.selectOne("contents.weather.select_weather", map);
+	}
+	
+}
+
+
+
+웨더 서비스
+package com.myproject.service;
+
+import java.util.Map;
+
+public interface WeatherService {
+	public Map<String,Object> SelectWeather(Map<String,Object> map);
+}
+
+
+웨더 서비스 구현
+package com.myproject.service;
+
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.myproject.dao.WeatherDAO;
+
+@Service
+public class WeatherServiceImpl implements WeatherService{
+	
+	@Autowired
+	WeatherDAO Dao;
+	
+	@Override
+	public Map<String,Object> SelectWeather(Map<String,Object> map){
+		return this.Dao.SelectWeather(map);
+	}
+}
+
+
+웨더 sql
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE  mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="contents.weather">
+
+<select id="select_weather" parameterType="Map" resultType="Map">
+	<![CDATA[
+		SELECT * FROM project_.midfcstinfoservice;
+	]]>
+</select>
+
+</mapper>
+
+

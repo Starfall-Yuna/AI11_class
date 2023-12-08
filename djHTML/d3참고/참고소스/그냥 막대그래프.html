@@ -1,0 +1,53 @@
+<!-- Shades of Purple -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <style>
+        svg{height:2400px}
+        rect {fill:red}
+    </style>
+</head>
+<body>
+    <svg id="myg"></svg>
+    <svg id="myg2"></svg>
+    <script>
+//   var dataset = [ 5, 10, 15, 20, 25 ];
+
+// d3.select("body")          // 1
+//   .selectAll("p")          // 2
+//   .data(dataset)           // 3
+//   .enter()                 // 4
+//   .append("p")             // 5
+//   .text("New paragraph!"); // 6
+
+d3.select("#myg") //svg 태그 선택
+.selectAll("rect") // 그 안에 있는 모든 rect 선택
+.data([10,20,50,100,70]) //차트 그릴 데이터 지정
+.enter()//데이터랑 연결되지 않은 만큼의 객체 생성
+.append("rect")//enter에 생성된 객체만큼 태그 생성
+.attr("x",0) //속성 지정
+.attr("y", (d,i)=>{return i*35}) //d는 데이터, i는 인덱스
+.attr("height","25px")
+.attr("width", (d,i)=>{return d})
+
+let data = [10,20,50,100,70]
+
+d3.select("#myg2")
+.selectAll("rect")
+.data(data)
+.enter()
+.append("rect")
+.attr("x",function(d,i){return i*35})
+.attr("y",function(d,i){return 300-data[i]} )
+.attr("height",(d,i)=>{return d})
+.attr("width", "25")
+    </script>
+</body>
+</html>

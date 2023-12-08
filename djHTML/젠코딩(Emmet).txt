@@ -1,0 +1,62 @@
+https://docs.emmet.io/cheat-sheet/
+
+
+<h1 title=""></h1>
+    <!--태그명[속성명=값-->
+    
+    
+    <h1 id="test"></h1>
+    <!--태그명# id명-->
+    
+    
+    <h1 class="class"></h1>
+    <!--태그명.클래스명-->
+    
+    
+    <h1>text</h1>
+    <!--태그명{들어갈 내용}-->
+
+    <H1>H1>
+
+        
+    
+    <table>
+        <tr>
+            <td></td>
+        </tr>
+    </table>
+    <!-- table>tr>td -->
+
+    <p class="one"></p>
+    <p class="two"></p>
+    <!-- p.one+p.two -->
+
+    
+    <p class="name-1"></p>
+    <p class="name-2"></p>
+    <p class="name-3"></p>
+    <!-- p.name-$*3 -->
+
+                  
+    
+    <a href="http://"></a>
+    <!-- a:link -->
+
+    <input type="hidden" name="">
+    <!-- input:h -->
+
+    <input type="text" name="" id="">
+    <!-- input:t -->
+
+    <input type="email" name="" id="">
+    <!-- input:email -->
+
+    ex. input:p<!--password--> , input:c<!--checkbox--> , input:r<!--radio--> , input:f<!--file--> , 
+        input:s<!--submit--> , input:b<!--button-->
+
+        <input type="password" name="" id="">
+        <input type="checkbox" name="" id="">
+        <input type="radio" name="" id="">
+        <input type="file" name="" id="">
+        <input type="submit" value="">
+        <input type="button" value="">

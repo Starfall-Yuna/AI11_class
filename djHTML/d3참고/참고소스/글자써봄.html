@@ -1,0 +1,103 @@
+<!-- Shades of Purple -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <style>rect {
+        pointer-events: none;
+    }
+        svg{height:2400px; width: 400px;}
+        rect {fill:red}
+    </style>
+</head>
+<body>
+    <svg id="myg"></svg>
+    <svg id="myg2"></svg>
+    <script>
+//   var dataset = [ 5, 10, 15, 20, 25 ];
+
+// d3.select("body")          // 1
+//   .selectAll("p")          // 2
+//   .data(dataset)           // 3
+//   .enter()                 // 4
+//   .append("p")             // 5
+//   .text("New paragraph!"); // 6
+
+d3.select("#myg") //svg 태그 선택
+.selectAll("rect") // 그 안에 있는 모든 rect 선택
+.data([10,20,50,100,70]) //차트 그릴 데이터 지정
+.enter()//데이터랑 연결되지 않은 만큼의 객체 생성
+.append("rect")//enter에 생성된 객체만큼 태그 생성
+.attr("x",0) //속성 지정
+.attr("y", (d,i)=>{return i*35}) //d는 데이터, i는 인덱스
+.attr("height","25px")
+.attr("width", (d,i)=>{return d})
+
+let data = [{name:"aa",value:10},{name:"bb",value:20},{name:"cc",value:50},{name:"dd",value:100},{name:"ee",value:70}]
+
+/*let mychart =*/ d3.select("#myg2")
+.selectAll("rect")
+.data(data)
+.enter()
+.append("rect")
+.attr("x",function(d,i){return i*75})
+.attr("y",function(d,i){return 300-data[i].value} )
+.attr("height",(d,i)=>{return d.value})
+.attr("width", "25")
+// .append("svg:title")
+// .text(function(d) { return d.name; });
+
+d3.select("#myg2")
+.selectAll("text")
+.data(data)
+.enter()
+.append("text")
+.attr("x",function(d,i){return i*75})
+.attr("y",function(d,i){return 300-data[i].value} )
+.attr("height",(d,i)=>{return d.value})
+.attr("width", "25")
+.attr("font-family", "sans-serif")
+    .attr("font-size", "11px")
+    .attr("fill", "black")
+    .attr("text-anchor", "left")
+    .text((d)=>{return d.name});
+
+
+// mychart.append("text").attr("dy",".35em")
+//         .attr("text-anchor", "middle").text((d)=>{return d.name})
+
+
+// arcs.append("text")
+//         .attr("dy",".35em")
+//         .attr("text-anchor", "middle")
+//         .attr("transform", function(d)  {
+//             return "translate("+arc.centroid(d)+")rotate("+angle(d)+")"
+//         }).text((d)=>{return d.data.name})
+// const text = svg.selectAll("text")
+//     .data(textTest)
+//     .enter()
+//     .append("text")
+//     .text(function(d) {
+//         return d;
+//     })
+//     .attr("x", function(d, i) {
+//         var xTest;
+//         xTest = nLocation[i] * (svgWidth / intonations.length);
+//         return xTest;
+//     })
+//     .attr("y", function(d, i) {
+//         return svgHeight * 0.2;
+//     })
+//     .attr("font-family", "sans-serif")
+//     .attr("font-size", "11px")
+//     .attr("fill", "black")
+//     .attr("text-anchor", "middle");
+    </script>
+</body>
+</html>

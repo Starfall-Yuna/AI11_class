@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        svg{height: 240px;}
+        rect{fill:orange}
+    </style>
+</head>
+<body>
+    <h1>막대 그래프 만들어 보기</h1>
+    <!-- Scalable Vector Graphics(웹 친화적인 벡터 파일 포맷) -->
+    <svg id="myg"></svg>
+    <script>
+        let dataSet = [10,20,5,50,100]
+        d3.select('#myg')
+        .selectAll('rect')
+        .data(dataSet)
+        .enter()
+        .append("rect")
+        .attr("x",0)
+        .attr("y",(data,index)=>{return index*35})
+        .attr("height", 25)
+        .attr("width", (d,i)=>{return d})
+    </script>
+</body>
+</html>

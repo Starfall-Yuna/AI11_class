@@ -1,0 +1,70 @@
+<!-- Shades of Purple -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+</head>
+<body>
+    <div id="pie"></div>
+    <script>
+        var width=450
+        var height=450
+        var outerRadius=Math.min(width,height)/2
+        var innerRadius=outerRadius*0.5
+        var color=d3.scale.category20()
+
+        var dataset = [
+            {name:"a", value:238500},
+            {name:"b", value:168500},
+            {name:"c", value:100500},
+            {name:"d", value:99900},
+            {name:"e", value:38500}
+        ]
+        var vis = d3.select("#pie")
+        .append("svg")
+        .attr("width",width)
+        .attr("height",height)
+        .append("g")
+        .attr("transform", "translate("+outerRadius+","+outerRadius+")")
+        .data([dataset])
+
+        var arc = d3.svg.arc().innerRadius(innerRadius).outerRadius(outerRadius)
+        var pie = d3.layout.pie().value((d)=>{return d.value})
+
+        var arcs = vis.selectAll("g.slice")
+        .data(pie)
+        .enter()
+        .append("g")
+        .attr("class","slice")
+
+        arcs.append("path")
+        .attr("d",arc)
+        .attr("fill",(d,i)=>{return color(i)})
+        function angle(d) {
+            var a = (d.startAngle + d.endAngle) * 90 / Math.PI - 90
+            return a>90 ? a - 180 : a;
+        }
+        
+        arcs.append("text")
+        .attr("dy",".35em")
+        .attr("text-anchor", "middle")
+        .attr("transform", function(d)  {
+            return "translate("+arc.centroid(d)+")rotate("+angle(d)+")"
+        }).text((d)=>{return d.data.name})
+
+        
+
+        vis.append("text")
+        .attr("dy",".35em")
+        .attr("text-anchor", "middle")
+        .text("주식")
+        .attr("class","title")
+        
+
+</script>
+</body>
+</html>
