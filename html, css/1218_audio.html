@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <audio> 태그 :: 음성 파일을 배치할 때 사용 -->
+    <h3>행아웃 알림소리</h3>
+    <audio src="hangouts_incoming_call.ogg" loop controls>
+        이 브라우저는 해당 양식을 지원하지 않습니다.
+    </audio>
+
+    <!-- 위처럼 작성하면, src에 들어가는 파일의 형식이 애매모호하게 됨-->
+    <!-- 이로 인해 브라우저에서 지원되지 않는 상황을 방지하기 위해, source태그로 파일 형식 명시-->
+    <!-- 아래처럼 작성하면, 브라우저가 지원하는 형식을 스스로 찾아 재생하게 됨-->
+    <h3>행아웃 알림소리2</h3>
+    <audio controls>
+        <source src="hangouts_incoming_call.ogg" type="audio/ogg"/>
+        <!-- <source src="hangouts_incoming_call.mp3" type="audio/mp3"/>-->
+    </audio>
+</body>
+</html>
