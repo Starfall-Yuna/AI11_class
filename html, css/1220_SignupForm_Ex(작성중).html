@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image:url(https://img.freepik.com/premium-photo/purple-wallpaper-for-iphone-is-the-best-high-definition-iphone-wallpaper-in-you-can-make-this-wallpaper-for-your-iphone-x-backgrounds-mobile-screensaver-or-ipad-lock-screen-wallpaper-screen_899894-5038.jpg);
+            background-repeat: no-repeat;
+            background-size:cover;
+        }
+        h1{
+            background-color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        p{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>예제 :: input폼을 이용하여 회원가입 폼 만들기</h1>
+    <br>
+    <div style="background-color: white; border: 3px solid aquamarine; padding:20px; width:70%; margin: auto">
+        <div>
+            <h2>회원가입 페이지에 오신 걸 환영합니다!</h2>
+            <h6>아래의 정보를 입력해주시길 바랍니다.</h6>
+        </div>
+        <br>
+        <div>
+            <h3>회원 정보 (User Information)</h3>
+            <hr>
+            <p><b>이름</b></p>       <input type="text"> <br>
+            <p><b>영어 이름</b></p>    <input type="text"> <br>
+            <p><b>성별</b></p>
+            <input type="radio" name="gender" value="male"> <label>남성</label>
+            <input type="radio" name="gender" value="female">   <label>여성</label> <br>
+            <p><b>주민등록번호</b></p>
+            <input type="text"> - <input type="text">   <br>
+            <p><b>생년월일</b></p> <input type="date">  <br>
+            <p><b>이메일</b></p>   
+            <input type="email"> @
+            <select>
+                <option>naver.com</option>
+                <option>daum.net</option>
+                <option>kakao.com</option>
+            </select>   <br>
+            <p><b>집전화</b></p>
+            <input type="text"> - <input type="text"> - <input type="text">    <br>
+            <p><b>휴대폰</b></p>
+            <select>
+                <option>010</option>
+                <option>017</option>
+                <option>018</option>
+            </select> -
+            <input type="text"> - <input type="text">
+            <input type="button" value="전화번호 인증">
+        </div>
+    </div>
+    <h1>수고하셨습니다:)</h1>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 후손 선택자 :: 특정 태그 안에 있는 후손을 선택 
+            [선택자1] [선택자2] {선언문들}      (공백을 이용해서 후손을 선택)
+        */
+        /* 자손 선택자 :: 특정 태그 "바로 안에 있는" 자손(직속 후손)을 선택
+            [선택자1]>[선택자2] {선언문들}      (> 기호 사용)
+        */
+        div h3{
+            color: blue;
+        }
+        #header h3, #header>p{       /*#header의 후손인 h3와 p에 대해 스타일 지정*/
+            border: 3px solid red;
+        }
+
+        table>tr{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tbody>     <!-- tbody 태그는 생략가능 -> table 태그의 직속 후손은 tbody밖에 없음-->
+            <tr>
+                <th>이름</th>
+                <th>성별</th>
+            </tr>
+            <tr>
+                <td>이유나</td>
+                <td>여성</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div id="header">
+        <h3>헤더 안의 h3</h3>   <!-- #header div의 후손-->
+        <div>
+            <p>헤더 안의 p</p>  <!-- #header div의 후손은 맞지만, 자손은 아닌 상태-->
+        </div>
+    </div>
+    <div id="para">
+        <h3>본문 안의 h3</h3>   <!-- #para div의 후손-->
+        <p>본문 안의 p</p>
+    </div>
+
+</body>
+</html>
