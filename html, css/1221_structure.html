@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 구조 선택자 :: :first-child, :last-child */
+        /* h1:first-child => 첫번째로 나타나는 태그가 반드시 h1이어야만 적용 */
+        /* 반드시 "지정된 위치에 지정된 태그가 있어야만" 스타일 적용
+        아니면 아닌거고...*/
+        p:nth-last-child(2){
+            color:red;
+        }
+
+        /* 구조 선택자 :: first-of-type, last-of-type */
+        /* h1:first-of-type => 처음으로 나타난 h1 태그에 대해 스타일 적용 */
+        p:nth-last-of-type(2){
+            background-color:skyblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>헤더1</h1>
+    <p>p 태그</p>
+    <p>p 태그</p>
+    <p>p 태그</p>
+    <p>p 태그</p>
+    <h3>헤더2</h3>
+    <p>p 태그</p>
+</body>
+</html>

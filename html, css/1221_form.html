@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- form 태그 :: 입력 양식 선언, 입력값 전송(submit타입 input 필수 필요) -->
+    <!-- form 태그를 통해서 다른 html 파일을 불러올 수도 있음 -->
+
+    <!-- form태그 속성 :: method, action(다른 html 또는 url 불러옴)-->
+    <form action="login.html">
+        <label for="id">아이디 입력</label>
+        <input type="text" id="id">             <br>
+        <label for="passwd">비밀번호 입력</label>    
+        <input type="password" id="passwd">     <br>
+        <input type="submit" value="로그인">
+    </form>
+</body>
+</html>

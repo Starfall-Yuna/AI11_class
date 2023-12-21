@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 링크 선택자 :: 
+        :link(href 속성값을 갖고 있는 a 태그 선택)
+        :visited(이미 지정된 링크를 방문한 태그)
+        */
+        a:link{
+            color:dimgray;
+        }
+        a:visited{
+            color:darkred;
+        }
+        #naver:active{
+            color:aquamarine;
+        }
+        #daum:active{
+            color:skyblue;
+        }
+        #google:active{
+            animation-name:rainbow;
+            animation-duration: 3s;
+            animation-iteration-count:infinite;
+        }
+        #youtube:active{
+            color:red;
+        }
+
+        @keyframes rainbow {
+              0% {color:red;}
+              33%{color:yellow;}
+              66% {color:blue;}
+              100%{color:red;}  
+        }
+        </style>
+</head>
+<body>
+    <a href="https://www.naver.com" id="naver">네이버로 이동</a>   <br>
+    <a href="https://www.daum.net" id="daum">다음으로 이동</a>    <br>
+    <a href="https://www.google.com" id="google">구글로 이동</a>    <br>
+    <a href="https://www.youtube.com" id="youtube">유튜브로 이동</a>
+</body>
+</html>

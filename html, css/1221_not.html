@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 부정 선택자 :: :not(부정하고자 하는 선택자) */
+        input:not([type="text"]){
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <input type="text">         <br>
+    <input type="password"/>    <br>
+    <input type="text">         <br>
+    <input type="password"/>
+</body>
+</html>

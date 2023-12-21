@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a:link:hover{
+            animation-name:rainbow;
+            animation-duration:3s;
+            animation-iteration-count:infinite;
+        }
+
+        /* keframes :: 애니메이션을 생성하는 키워드 */
+        @keyframes rainbow{     /* rainbow 애니메이션 생성 */
+            /*무지개 색깔별로 글씨 색상 변경*/
+            0%  {color:red;}
+            33% {color:yellow;}
+            66% {color:blue;}
+            100%{color:red;}
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.google.com">구글로 이동</a>
+</body>
+</html>

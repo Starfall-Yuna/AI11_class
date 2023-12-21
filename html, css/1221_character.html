@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 문자 선택자 :: 지정된 태그에 있어서 특정 문자에 스타일 지정 */
+        /* 시작 문자 선택자 :: ::first-letter, ::first-line */
+        p::first-letter{
+            font-size:400%;
+            color:red;
+        }
+        p::first-line{
+            color:blue;
+        }
+        /* ::selection -> 사용자가 임의로 드래그한 글자 선택 */
+        p::selection{
+            background-color:lightgray;
+            color:green;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, ad aliquam accusantium perferendis aut, asperiores facere quisquam aspernatur possimus repellat facilis veritatis voluptatibus. Voluptatibus alias numquam molestiae dolores explicabo iusto.</p>
+</body>
+</html>
