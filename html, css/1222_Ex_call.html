@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align:center;
+            margin: auto;
+        }
+        hr{
+            width:500px;
+        }
+
+        /* float 속성 :: right, left값 가질 수 있음 (이걸 통해서 한 줄에 나란히 공간 차지하게끔 함)*/
+        /* div 태그는 display 디폴트값이 block*/
+        div.left{
+            float:left;
+            margin-left:25%
+        }
+        div.right{
+            float:right;
+            margin-right:25%;
+        }
+        img{
+            animation-name: bigsmall;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+
+        /* keyframes :: 애니메이션 생성 (0%~100% 사이의 동작 정의)*/
+        @keyframes bigsmall{
+            0% {width: 100px; height:100px;}
+            25% {width: 150px; height: 150px;}
+            50% {width: 200px; height: 200px;}
+            75% {width: 150px; height: 150px;}
+            100% {width: 100px; height:100px;}
+        }
+    </style>
+</head>
+<body>
+    <h1>전화가 왔습니다. 받으시겠습니까?</h1>
+    <hr>
+    <div class="left div">
+        <form action="calling.html">
+            <input type="submit" value="전화받기"/>
+        </form>
+        <img src="call.png" />
+    </div>
+    <div class="right div">
+        <form action="call_no.html">
+            <input type="submit" value="전화거절"/>
+        </form>
+        <img src="call_no.png" />
+    </div>
+</body>
+</html>

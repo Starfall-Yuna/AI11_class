@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World!!!</h1>
+
+    <script>
+        // 자바스크립트 구문
+        // 주석은 이렇게
+        // 보통 <script> 태그는 <body> 최하단에 위치
+        
+        // alert() :: 알림창 또는 경고창 출력
+        alert("안녕하세요ㅇㅅㅇ");
+        // console.log() :: 콘솔 상 출력
+        console.log("검사창에서만 볼 수 있음");
+
+        // 자료형 :: number, String, boolean 
+        // typeof() => 특정 값의 타입 반환
+
+        // "str"+"ing"="string"
+        // "string"[1] = "t"
+        // "string".length = 6
+
+        // "===" :: "같다"
+
+        console.log("17+30의 값은 "+(17+30)+"입니다.");
+        console.log(`17+30의 값은 ${17+30}입니다.`);
+
+        // 상수(const)와 변수(let, var)
+        // 상수는 값 변경X, 변수는 값 변경O
+        // 자바스크립트 경우에는, 초기화하는 값에 따라 타입을 자동으로 부여함
+        // [타입명] [변수명] = [값];
+        // const [타입명] [변수명] = [값];
+
+        let num=5;             // 5라는 값이 들어감과 동시에, number 타입으로 선언
+        console.log(typeof(num));
+        const st="안녕하세요."; // "안녕하세요." 값이 들어감과 동시에, string 타입으로 선언
+        console.log(typeof(st));
+
+        num=10;
+        st="안뇽";
+
+        // 입력문 :: prompt(), confirm()
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 선택자 :: 상태, 링크, 부정, 구조, 문자 */
+        /* 상태선택자 :: :focus, :enabled, :disabled, :checked */
+        /*:enabled 적용한 뒤에 :focus 적용해야 스타일 적용 잘 됨*/
+        input:enabled{
+            background-color:bisque;
+        }
+        input:disabled{
+            background-color:darkblue;
+        }
+        input:focus{
+            background-color:aqua;
+            color:red;
+        }
+
+        /* 구조 선택자 ->  first-child, last-child, first-of-type, last-of-type*/
+        /*      공통점 :: 형제 관계(종속 관계X) 상태에서 적용 */
+        /* nth-child(숫자), nth-of-type(숫자)*/
+
+        /* h2:first-child :: h2 태그가 가장 먼저 나타났다면, 아래 스타일 적용하라. */
+        /* h2:last-child :: h2 태그가 가장 나중에 나타났다면, 아래 스타일 적용하라 */
+        /* p:first-of-type :: 가장 먼저 나타난 p에 대해, 아래 스타일 적용하라. */
+        /* p:last-of-type :: 가장 나중에 나타난 p에 대해, 아래 스타일 적용하라. */
+        p:last-of-type{
+            background-color:chartreuse;
+        }
+
+        /* 부정 선택자 -> not(부정하고자 하는 선택자) */
+
+        /* 링크 선택자 -> :link, :visited */
+        /* :link -> href 속성이 정의되어있는 a 태그 스타일 지정 */
+        a:link{
+            color:coral;
+        }
+        a:visited{
+            color:aqua;
+        }
+
+        /* 문자 선택자 -> ::first-letter, ::first-line, ::selection */
+        p:first-child::first-letter{
+            font-size:250%;
+            background-color:black;
+            color:white;
+        }
+        p:first-child::first-line{
+            color:gray;
+        }
+        p::selection{
+            background-color:aquamarine;
+            color:brown;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores distinctio, molestias quam at aut error quaerat modi nobis a ratione sint! Quae voluptatem placeat veniam corrupti quia, neque praesentium adipisci.</p>
+
+    <h2>헤더1</h2>
+    <p>1st 본문</p>
+    <p>2nd 본문</p>
+    <p>3rd 본문</p>
+
+    <h1>일반 입력칸</h1>
+    <input />
+    <h1>disabled 입력칸</h1>
+    <input disabled/>
+    <br>
+
+    <a href="https://www.naver.com">네이버로 이동</a>
+    <a href="https://www.daum.net">다음으로 이동</a>
+</body>
+</html>

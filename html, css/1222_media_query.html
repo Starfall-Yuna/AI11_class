@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            width:150px;
+            height:150px;
+            background-color:white;
+            border: 2px solid black;
+        }
+
+        /* 
+        "특정 조건식을 만족한다면, 아래처럼 반응하라."
+        @media screen and (조건식) { 
+            선택자 {스타일 적용문} 
+        }
+        */
+
+        @media screen and (max-height:500px){
+            p{background-color:green;}
+        }
+        @media screen and (max-height:300px){
+            p{background-color: red;}
+        }
+    </style>
+</head>
+<body>
+    <p>색깔이 바끼어요</p>
+</body>
+</html>

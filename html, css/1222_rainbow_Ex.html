@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            border:2px solid black;
+            width: 100px;
+            height:100px;
+            background-color:white;
+        }
+        
+        @media screen and (min-width: 600px){
+            p:first-of-type{background-color:red;}
+        }
+        @media screen and (min-width: 650px){
+            p:nth-of-type(2){background-color:orange;}
+        }
+        @media screen and (min-width:700px){
+            p:nth-of-type(3){background-color:yellow;}
+        }
+        @media screen and (min-width:750px){
+            p:nth-of-type(4){background-color:green;}
+        }
+        @media screen and (min-width:800px){
+            p:nth-of-type(5){background-color:blue;}
+        }
+        @media screen and (min-width:850px){
+            p{color:white;}
+        }
+    </style>
+</head>
+<body>
+    <p>1st p 태그</p>
+    <p>2nd p 태그</p>
+    <p>3rd p 태그</p>
+    <p>4th p 태그</p>
+    <p>5th p 태그</p>
+</body>
+</html>
