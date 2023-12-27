@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 함수를 활용하여 계산기 프로그램을 구현하라.
+        // 입력 및 결과 출력은 함수 밖에서 수행, 연산만 함수를 통해 수행
+        // 각 사칙연산을 수행하는 함수(5개) 구현하고
+        //      입력받은 연산자에 따라 함수의 반환값을 통해 출력 수행
+        // 숫자 2개를 0 0을 입력받을 때까지 사칙연산 반복 수행
+
+        while(true){
+            // 1. 입력받기 (숫자 2개, 연산자 1개)
+            let num1=prompt("첫번째 숫자를 입력해주세요.", 0);
+            let num2=prompt("두번째 숫자를 입력해주세요.", 0);
+            if(num1==="0" && num2==="0"){   // 실행 종료 조건
+                alert("실행을 종료합니다.");
+                break;
+            }
+            let op=prompt("연산자를 입력해주세요. (+, -, *, /, % 중 하나)");
+            let n1=Number(num1);
+            let n2=Number(num2);
+
+            // 2. 연산 수행
+            let result;
+            switch(op){
+                case '+':
+                    result=add(n1, n2);
+                    break;
+                case '-':
+                    result=sub(n1, n2);
+                    break;
+                case '*':
+                    result=mul(n1, n2);
+                    break;
+                case '/':
+                    result=div(n1, n2);
+                    break;
+                case '%':
+                    result=rest(n1, n2);
+                    break;
+                default:
+                    alert("연산자를 잘못 입력하였습니다.\n처음부터 다시 실행합니다.");
+            }
+
+            // 3. 결과값 출력 수행
+            alert(`결과값은 ${result}입니다.`);
+            console.log(`결과값은 ${result}입니다.`);
+        }
+        
+        // 2-1. 함수 구현
+        function add(a, b){
+            return a+b;
+        }
+        function sub(a, b){
+            return a-b;
+        }
+        function mul(a, b){
+            return a*b;
+        }
+        function div(a, b){
+            return a/b;
+        }
+        function rest(a, b){
+            return a%b;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 배열 :: "여러 개의 값을 하나의 이름으로 저장하는 공간"
+        //      js 같은 경우엔, 자료형의 제약이 없고 공간의 제약 없음
+        //      배열 이름이랑 "이게 배열이다" 라는 것만 명시하면 사용에 지장없음
+
+        // "introduce라는 변수는 배열이다." 라고 선언한 것
+        let introduce = [];
+
+        // 임의의 위치를 지정해서 값을 넣을 수 있음
+        introduce[1]="apple";
+        for(let i=0;i<5;i++){
+            introduce[i]=100;
+        }
+
+        // push()를 통해서 순차적으로 삽입
+        introduce.push("이유나");
+        introduce.push(25);
+        introduce.push(false);
+
+        // 이름, 나이, 성별(boolean타입) 입력받고
+        // 이들을 하나의 배열에 저장한다.
+        // 그리고 배열에 저장된 값들을 순차적으로 html에 출력한다
+
+        //(ex) 이유나 25 입력, "취소" 클릭
+        // 이름: 이유나
+        // 나이: 25세
+        // 성별: 여성
+    </script>
+</body>
+</html>

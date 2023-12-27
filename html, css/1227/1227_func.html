@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p><span id="name">사용자명</span>님 환영합니다.</p>
+    <p id="success">선발 여부 출력</p>
+
+    <script>
+        // 함수 :: "특정 기능을 하는 명령문들의 집합"
+        // 함수 구현
+        // function 함수명(매개변수명, ...){
+        //     명령문들; (return형도 포함)
+        // }
+
+        // 20-30대 여성만 참가할 수 있는 과정에, 참여 가능한지 결과를 반환하는 함수를 구현하고
+        // 실제 입력값으로 함수 실행
+        // 필요한 정보 :: 나이, 성별
+
+        let name=prompt("이름을 입력해주세요.");
+        let input=prompt("나이를 입력해주세요.");
+        let age=Number(input);
+        let tf=confirm("성별이 어떻게 되는지 선택 바랍니다(확인은 남성, 취소는 여성)");
+        let gender= tf===true?"남성":"여성";
+
+        let element1=document.getElementById("name");
+        let element2=document.getElementById("success");
+        element1.innerHTML=name;        // "입력받은 이름값"님 환영합니다.
+
+        let condition=confirm("이대로 진행하시겠습니까?");
+        if(condition===true){   // 선발 여부 출력
+            // 과정 대상자 선발될 조건 :: 나이가 20~39살 사이, 성별은 여자
+            if(isSuccess(age, gender)===true){
+                element2.innerHTML="축하드립니다. 과정 참여자로 선발되셨습니다!!!";
+            }
+            else{
+                element2.innerHTML="누락된 정보가 있거나 과정 대상자로 선발되지 못하였습니다.";
+            }
+        }
+        else{   // 진행 취소
+            element2.innerHTML="취소를 누르셔서 다시 실행해주시길 바랍니다.";
+        }
+
+
+        function isSuccess(a, g){   // a :: 나이, g :: 성별
+            if(g==="여성" && (a>=20 && a<40)){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
