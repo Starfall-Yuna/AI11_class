@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- 버튼 태그 2개, 본문 태그 하나 생성-->
+    <button id="hide">숨기기</button>
+    <button id="show">나타내기</button>
+    <button id="toggle">토글</button>
+    <br>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque vel tempora dolore quod in laboriosam adipisci, quam amet maxime officia ratione quas libero sint odio reprehenderit voluptatibus similique suscipit consequuntur?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam dicta, cum cupiditate fugit quae delectus libero sequi nemo ex suscipit ut quisquam corporis nihil perspiciatis alias dolorem repellendus tenetur culpa.</p>
+
+    <script>
+        // 하나의 버튼으로, hide 및 show 모두 할 수 있도록 하기
+        $(document).ready(function(){
+            $("#toggle").click(function(){
+                $("p").toggle(1000);
+            })
+        })
+
+        // 숨기는 버튼 기능 생성
+        $(document).ready(function(){   
+            $("#hide").click(function(){    // #hide 요소를 클릭하면
+                alert("본문이 사라졌습니다...!");
+                $("p").hide(1000);
+            })
+        })
+
+        // 나타내는 버튼 기능 생성
+        $(document).ready(function(){
+            $("#show").click(function(){    // #show 요소를 클릭하면
+                alert("본문이 나타났습니다...!");
+                $("p").show(1000);
+            })
+        })
+    </script>
+</body>
+</html>

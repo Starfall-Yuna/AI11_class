@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 객체
+        // 객체 선언
+        // let 객체명 = {멤버명: 멤버값, ...};
+        let mine={
+            name: "이유나",
+            age: 25,
+            gender: "여성",
+            blood: 'A',
+            // 메소드명: function(매개변수명, ...){
+            //     명령문들;
+            // }
+            Print: function(){
+                document.write(this.name+'<br>');
+                document.write(this.age+'<br>');
+                document.write(this.gender+'<br>');
+                document.write(this.blood);
+            }
+        };
+
+        // 객체 멤버 사용 :: 객체명.멤버명, 객체명["멤버명"]
+    </script>
+</body>
+</html>
