@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <button>본문 숨기기</button>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque saepe similique hic qui optio omnis minus. Amet omnis beatae nemo, itaque aut cumque officiis veritatis architecto possimus neque quidem praesentium!</p>
+
+    <script>
+        // 콜백 함수 :: 이벤트 처리를 한 뒤에 후처리를 어떻게 할 것인지 정의하는 함수
+
+        $(document).ready(function(){
+            $("button").click(() => {
+                $("p").toggle(1000, () => {
+                        // 본문을 숨긴 뒤, 경고창을 띄워 후처리 진행함
+                    alert("버튼을 클릭하였습니다.");
+                });
+            })
+        })
+    </script>
+</body>
+</html>

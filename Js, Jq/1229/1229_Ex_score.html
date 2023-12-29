@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 객체를 아래처럼 생성하라.
+        // 필드 :: 1-5과목 성적(배열), good(0으로 초기화)
+        // 메소드 ::
+        //   1. subject_score(sc) :: 과락 여부 판단 메소드,
+        //      해당 과목 성적이 40점 이상이면 good에 1 추가한다.
+        //   2. sum_score() :: 총 과목 평균 판단 메소드,
+        //      총 평균이 60점 이상이면 good에 1 추가한다.
+        //   3. print() :: 모든 과목의 점수와 총 평균을 출력하고
+        //      합불 여부를 출력한다.
+
+        let student={
+            score: [],
+            good: 0,       // 0으로 초기화 -> type이 Number가 됨
+            average: 0,
+
+            // 1. subject_score(sc) -> sc :: 성적을 매개변수로 받음
+            subject_score: function(sc){
+                if(sc>=40){  
+                    this.good++;    // 특정 과목이 과락이 되지 않으면 good 1 추가
+                }
+            },
+            // 2. sum_score()
+            sum_score: function(){
+                for(let i=0;i<5;i++){
+                    this.average+=this.score[i]; // 총 합계 우선 구해주고
+                }
+                this.average/=5;    // 과목수인 5로 나누어 평균 구함
+
+                if(this.average>=60){
+                    this.good++;    // 총 평균이 60점을 넘기면 good 1 추가
+                }
+            },
+
+            // 과락이 되지 않았는가에서 5개의 good을 받고
+            // 총점이 기준점을 넘기는가에서 1개의 good을 받아서
+            // 합격하기 위해선, 총 6개의 good이 필요
+            Print: function(){
+                // 1) 모든 과목의 점수 출력
+                for(let i=0;i<5;i++){
+                    document.write(`${i+1}과목 점수는 ${this.score[i]}점입니다.`+"<br>");
+                }
+                // 2) 총 평균의 점수 출력
+                document.write(`총 평균은 ${this.average}점입니다.`+"<br>");
+                // 3) 합불 여부 출력
+                if(this.good===6){
+                    document.write("축하드립니다. 정보처리기사 필기 시험에 합격하였습니다.");
+                }
+                else{
+                    document.write("정보처리기사 필기 시험에 불합격하였습니다.");
+                }
+            }
+        }
+
+        // 한 학생의 정보처리기사 필기 시험의 점수에 대해 입력을 받고,
+        //      메소드를 적절히 사용하여 합격 여부를 확인하라.
+        // (정보처리기사는 5개 과목이 40점 이상,
+        //      총 과목 평균이 60점 이상이어야 한다.)
+        for(let i=0;i<5;i++){
+            student.score[i]=Number(prompt(`${i+1}과목 점수를 입력해주세요.`, 0));
+            student.subject_score(student.score[i]);    // 과락 여부 바로 확인
+        }
+        student.sum_score();    // "평균 구함"과 동시에 총점에 대한 합불 여부 확인
+        student.Print();
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 객체 
+        // let/const 객체명 = {
+        //     // 여기 안에서 멤버 선언하면 되었음
+        //     // 필드(변수), 메소드(함수)
+            
+        //     필드명: 필드값,
+        //     메소드명: function(){
+        //         명령문들;
+        //     }
+        // }
+
+        let coffee={
+            // 필드 선언부 (객체 변수)
+            esspresso: 100,
+            water: 200,
+
+            // 메소드 선언부 (객체 함수)
+            setCoffee: function(e, w){
+                this.esspresso=e;       // this :: 이 함수를 불러오는 객체 지칭
+                this.water=w;
+            },
+            printCoffee: function(){
+                console.log(`에스프레소 양: ${this.esspresso}ml`);
+                console.log(`물의 양: ${this.water}ml`);
+
+                // 에스프레소:물의 비율이 1:2라면 황금비율이다.
+                // 아니면, 쓰거나 밍밍하다고 출력하기
+                if(this.esspresso*2===this.water){
+                    console.log("황금비율의 커피입니다...!");
+                }
+                else if(this.esspresso*2 > this.water){
+                    console.log("쓴 커피입니다..");
+                }
+                else{
+                    console.log("밍밍한 커피입니다....");
+                }
+            }
+        }
+
+        let ess=Number(prompt("에스프레소 양을 입력하시오.", 0));
+        let wat=Number(prompt("물의 양을 입력하시오.", 0));
+        coffee.setCoffee(ess, wat);
+        coffee.printCoffee();
+    </script>
+</body>
+</html>
