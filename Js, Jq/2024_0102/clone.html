@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h3>clone() 메소드</h3>
+    <button id="clone">요소 복제</button>
+    <ul id="list">
+        <li id="first">첫번째 li입니다.</li>    <!-- script 태그의 l 값-->
+        <li>두번째 li입니다.</li>
+        <!-- 복사한 첫번째 li를 이 뒤로 계속 붙여넣기 됨-->
+    </ul>
+
+    <script>
+        // 요소 복제 :: clone()
+        $(function(){
+            $("button").click(function(){
+                let l = $("#first").clone();
+                $("#list").append(l);
+            })
+        })
+        // 요소 삭제
+    </script>
+</body>
+</html>

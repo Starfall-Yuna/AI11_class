@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <p class="first p" id="replace">1. 대체될 내용</p>
+    <p class="second p">2. 변경될 내용</p>
+    <p class="third p">3. 변경될 내용</p>
+    <button id="all">replaceAll</button>
+    <button id="with">replaceWith</button>
+
+    <script>
+        // 요소 대체 :: replaceAll(), replaceWith()
+        // replaceAll()
+        $(function(){
+            $("#all").click(function(){
+                $("#replace").replaceAll(".p");
+            })
+            $("#with").click(function(){
+                $("#replace").replaceWith($(".p"));
+                // 선택된 p 태그들 -> #replace로 선택된 p 태그 하나로 대체
+            })
+        })
+    </script>
+</body>
+</html>

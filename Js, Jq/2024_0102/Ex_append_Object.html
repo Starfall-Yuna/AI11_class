@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <button id="print">학생정보 출력</button>
+    <ol id="list"></ol>
+
+    <script>
+        // 1. 5개 값 입력받기 (이름, 나이, 성별, 혈액형, 키)
+        let name=prompt("이름을 입력해주세요.", "홍길동");
+        let age=Number(prompt("나이를 입력해주세요.", 0));
+        let gender=prompt("성별을 입력해주세요,","남성");
+        let blood=prompt("혈액형을 입력해주세요.", "A");
+        let height=Number(prompt("키를 입력해주세요.", 0));
+
+        // 2. 입력값들로 학생 객체 만들기
+        let student={
+            "이름": name,
+            "나이": age,
+            "성별": gender,
+            "혈액형": blood,
+            "키": height
+        };
+
+        let count=0;    // 버튼을 클릭한 횟수를 저장하는 변수
+        // key값을 배열에 따로 저장
+        let index=["이름", "나이", "성별", "혈액형", "키"];
+
+        // 3. 버튼 입력 시 이벤트 처리
+        $(function(){
+            $("#print").click(function(){
+                // 버튼을 한번씩 누를 때마다, {key, value}쌍을 하나씩 출력
+                // 더 이상 출력할 데이터가 없다면, "데이터가 없음"을 사용자에게 알림
+                // 0~4번째 클릭 시 데이터 출력, 그 이후로는 "데이터 없음" 출력
+                if(count<5){
+                    // 객체명[key] => value
+                    $("#list").append(`<li>${index[count]}: ${student[index[count]]}</li>`);
+                }
+                else{
+                    $("#list").append("<li>데이터가 없습니다.</li>");
+                }
+                count++;
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+    <style>
+        #parent{
+            background-color:bisque;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div id="first">첫번째 내용</div>
+        <div id="second">두번째 내용</div>
+        <div id="third">세번째 내용</div>
+    </div>
+    <button id="remove">요소 삭제</button>
+    <button id="empty">비우기</button>
+    <button id="rewind">복구</button>
+
+    <script>
+        // 요소 삭제 :: remove(), detach(), empty()
+        // remove() :: 특정 조건에 적합한 요소 삭제
+        // $(function(){
+        //     $("#remove").click(function(){
+        //         $("div").remove("#first");
+        //     })
+        // })
+
+        // detach() :: 특정 조건에 적합한 요소 삭제
+        //      (삭제를 수행한 뒤에, 삭제된 html 코드를 반환함)
+        let data;
+        $(function(){
+            $("#remove").click(function(){
+                data = $("#first, #second").detach();
+            })
+            $("#rewind").click(function(){
+                $("#parent").append(data);
+            })
+        })
+
+        // empty() :: 선택된 요소의 자식 요소를 삭제
+        $(function(){
+            $("#empty").click(function(){
+                $("#parent").empty();
+            })
+        })
+    </script>
+</body>
+</html>

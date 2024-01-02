@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h3>text()와 html(), val()</h3>
+    <p id="para">이 요소는 값이 변경될 예정입니다.</p>
+    <input type="text" />   <br>
+    <a href="https://www.w3schools.com/">w3schools 사이트 접속</a>
+    <br>
+    <button id="change">값 변경</button>
+    <button id="change_html">html 변경</button>
+    <button id="change_value">입력값 설정</button>
+    <button id="change_attr">하이퍼링크 변경</button>
+
+    <script>
+        // 2. Set :: "설정하다"
+        $(function(){
+            $("#change").click(function(){
+                $("#para").text("요소값을 이미 변경하였습니다.");
+            })
+            $("#change_html").click(function(){
+                $("#para").html('<span style="color:red">changed text</span>');
+            })
+            $("#change_value").click(function(){
+                $("input").val("sooo hungry");
+                $("input").css("color", "red");
+            })
+            $("#change_attr").click(function(){
+                $("a").attr("href", "https://tcpschool.com/");
+                $("a").text("tcp school 사이트 접속");
+            })
+        })
+    </script>
+</body>
+</html>

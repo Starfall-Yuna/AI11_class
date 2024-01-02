@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h3>text()와 html()</h3>
+    <p id="test">이것은 <b>본문</b>입니다.</p>
+    <button id="showText">text 보기</button>   
+    <br>
+    <br>
+    <h3>val()</h3>
+    <input type="text" id="text_input" value="hungry"/>
+    <button id="show_input">입력값 확인</button>
+
+    <script>
+        // DOM :: Document의 준말, 브라우저 상의 페이지(html, css)
+        // DOM 조작 :: css("속성명", "속성값");는 이미 배움
+        
+        // get, set :: 반환하다 / 설정하다 -> text(), html(), val(), attr()
+        // 1. get
+        $(function(){
+            $("#showText").click(function(){
+                console.log('선택된 요소의 텍스트: '+$("#test").text());
+                console.log('선택된 요소의 html 코드: '+$("#test").html());
+            })
+
+            $("#show_input").click(function(){
+                alert("입력값: "+$("#text_input").val());
+                alert("입력 type: "+$("#text_input").attr("type"));      // type: text
+            })
+        })
+
+    </script>
+</body>
+</html>

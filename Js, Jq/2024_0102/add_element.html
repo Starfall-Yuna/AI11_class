@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="add">요소 추가</button>
+    <div id="para"></div>
+    <br>
+    <button id="add_list">리스트 추가</button>      <!-- append 사용 -->
+    <button id="add_after">after로 추가</button>       <!-- after 사용 -->
+    <ol id="list">
+        <li>0. 원래 있는 li</li>
+    </ol>
+
+    <script>
+        // 요소 추가 :: append(), prepend(), after(), before()
+
+        // append() :: 지정된 태그 안에, 가장 뒤에서부터 요소 추가 ("권장")
+        // prepend() :: 지정된 태그 안에, 가장 앞에서부터 요소 추가
+        // after() :: 지정된 태그 뒤로 요소 추가
+        // before() :: 지정된 태그 앞으로 요소 추가
+        let index=0;
+        let i=0;
+        $(function(){
+            $("#add").click(function(){
+                $("#para").after(`<p>${index+1}. p 태그가 추가되었습니다.</p>`);
+                index++;
+            })
+            $("#add_list").click(function(){
+                $("#list").append(`<li>${i+1}번째 li 추가되었습니다.</li>`);
+                i++;
+            })
+            $("#add_after").click(function(){
+                $("#list").after(`<li>li 추가</li>`);
+            })
+        })
+    </script>
+</body>
+</html>
