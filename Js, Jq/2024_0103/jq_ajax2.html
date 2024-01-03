@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h3>아래는 웹에 있는 json 파일에서 불러온 값입니다.</h3>
+    <p id="test"></p>
+
+    <script>
+        $.ajax({    // jq 상에서 ajax 통신하는 데에 사용되는 메소드
+            url: "https://starfall-yuna.github.io/super-duper-computing-machine/json.json", 
+            method: "GET",  // 요청 전송하는 방식
+            dataType: "json",   // dataType이 필요한 이유 : 여기에 맞게 파싱할려고
+            
+            // 통신이 성공했을 때 수행할 명령문 명시
+            success: function(data){    // data :: 요청한 파일을 파싱할 결과값
+                // p 태그에 json 파일 중 일부를 출력하게끔 할 예정
+                let para = $("#test");
+                para.text(data["Name"]);
+            },
+
+            // 통신이 실패했을 때 수행할 명령문 명시
+            error: function(j, t, e){     // jqXHR, textStatus, errorThrow
+                console.log("error!!!");
+            }
+        })
+    </script>
+</body>
+</html>

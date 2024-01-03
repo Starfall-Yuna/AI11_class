@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>학생 정보</h3>
+    <p id="test"></p>
+    
+    <script>
+        // json 파일의 인덱스를 저장하는 배열 선언
+        let index=["Name", "age", "blood", "city"]; 
+
+        // fetch 메소드로 url 요청
+        fetch("https://starfall-yuna.github.io/super-duper-computing-machine/json.json")
+            .then(response=>{
+                if(!response.ok){
+                    throw new Error('400 or 500 error')
+                }
+                return response.json(); 
+            })
+            .then(data=>{
+                let para=document.querySelector("#test");
+                for(let i=0;i<4;i++){
+                    para.innerHTML += `<li>${index[i]}: ${data[index[i]]}</li>`;
+                }
+                // textContent :: text로만 취급을 해서 요소값에 삽입
+                // innerHTML :: html 코드로 취급하고 요소에 적용
+            })
+            .catch(error=>{
+                console.log("Error!!!");
+            })
+    </script>
+</body>
+</html>

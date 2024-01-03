@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- DOM :: document의 준말, html 통해 만들어진 페이지 -->
+    <div>여기를 누르면 값이 변경됩니다.</div>
+    <p>수요일 아침입니다. <span>오늘도 파이팅해봅시다!!!</span></p>
+    <input type="text" /> <button id="bt">입력값 확인</button>
+    <hr>
+    <button id="add">요소 추가</button> <button id="delete">요소 삭제</button>
+    <ol>
+
+    </ol>
+
+    <script>
+        // get, set :: text(), html(), val(), attr()
+        $(function(){
+            $("div").dblclick(function(){
+                $("div").text("변경이 완료되었습니다.");
+            })
+        })
+
+        $(function(){
+            $("p").click(function(){
+                alert($("p").text());   // 요소에 있는 텍스트만 반환 
+            })
+            $("span").click(function(){
+                alert($("p").html());   // 요소의 html 코드 반환
+                $("p").html("<span>수요일 아침입니다.</span><span>오늘도 파이팅해봅시다!!!</span>");     // p 태그의 html 코드 수정
+            })
+        })
+        $(function(){
+            $("#bt").click(function(){  
+                alert("현재 입력값: "+$("input").val());
+                    // 실제 사용자가 입력한 값 반환
+                $("input").val("비가 옵니당");
+                $("input").attr("style", "background-color: yellow");
+            })
+            $("input").focus(function(){    // 입력칸에 포커싱을 맞추면
+                alert("입력 타입: "+$("input").attr("type"));
+            })
+        })
+
+        // 요소 조작 :: "추가 / 삭제" / 복제 / 대체
+        $(function(){
+            $("#add").click(function(){
+                $("ol").append("<li>요소가 추가되었습니다.</li>");
+                $("ol").after("<li>after로 추가함</li>")
+            })
+            $("#delete").click(function(){
+                // $("ol").remove();   // 자기 자신을 통째로 삭제
+                $("ol").empty();        // 자신의 자식 요소들을 삭제
+            })
+        })
+    </script>
+</body>
+</html>
