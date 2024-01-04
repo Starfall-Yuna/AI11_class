@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h3>아래는 url을 통해서 응답받은 파일입니다.</h3>
+    <p id="para"></p>
+
+    <!-- 
+        <script>
+        // Ajax 통신 :: js 사용, jq 사용
+
+        // (1) [js] XMLHttpRequest 객체 사용
+        // 1. js 사용 -> XMLHttpRequest (xhttp)
+        const x = new XMLHttpRequest();
+
+        // 2. 서버에 특정 파일 요청
+        x.open("GET", "https://starfall-yuna.github.io/ubiquitous-disco/mbti.json");       // 서버에 보낼 요청 내용 작성
+        x.send();   // 실질적으로 서버에 요청
+
+        // 3. 서버가 준비되었을 때(=서버로 응답이 왔을 때), 실행할 함수 정의
+        x.onreadystatechange = function(){
+            // 응답이 성공적으로 왔는지 확인
+            if(this.readyState===4 && this.status===200){
+                let para=document.querySelector("#para");
+                para.textContent = JSON.parse(this.responseText)["ISTJ"];
+                // innerHTML :: html 코드를 삽입
+                // textContent :: 텍스트 형식으로 삽입
+                // (ex) <span> paragragh </span>
+            }
+            else{
+                console.log("error!!!!");
+            }
+        }
+        </script> 
+    -->
+
+    <!-- 
+        <script>
+        // (2) [js] fetch API 통해서 ajax 통신 시도
+        fetch("https://starfall-yuna.github.io/ubiquitous-disco/mbti.json")
+            .then(response => {
+                // 요청을 보냈을 때 응답이 잘 도착했는가
+                if(!response.ok){   // 응답이 제대로 도착하지 않았을때
+                    throw new Error('400 or 500 error');
+                }
+                return response.json();
+            })
+            .then(data => {
+                // 응답받은 데이터를 처리하는 곳
+                let para=document.querySelector("#para");
+                para.textContent = data["ISTJ"];
+            })
+            .catch(error => {
+                console.log("에러 발생");
+            })
+        </script>
+    -->
+
+    <script>
+        // jq의 ajax() 통한 ajax 통신 시도
+        $.ajax({
+            url: "https://starfall-yuna.github.io/ubiquitous-disco/mbti.json",
+            method: "GET", 
+            dataType: "json",
+            // 여기까지 작성하면, 실행했을 시 서버에 파일 요청이 들어감
+
+            // 아래로는, 서버 응답 결과에 따라 분기가 나뉘어짐
+            success: function(data){    // data :: 응답 내용
+                let para = $("#para");
+                para.text(data["ISTJ"]);
+            },
+            error: function(a, b, c){   // jqXHR, textStatus, errorThrow
+                console.log("error!!!");
+            }
+        })
+    </script>
+</body>
+</html>
