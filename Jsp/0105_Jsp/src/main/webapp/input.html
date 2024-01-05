@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- jsp :: html 코드 안에서 자바 문법 작성 가능 -->
+<!--
+	계산기 프로그램 :: 입력 (2개의 숫자, 1개의 연산자)
+	제출을 누르면, 외부 jsp 파일로 넘어가서 결과값 출력
+-->
+
+<form action="result.jsp" method="get">
+	<input type="text" id="num1" name="num1" />
+	<select name="op">
+		<option value="+">+</option>
+		<option value="-">-</option>
+		<option value="*">*</option>
+		<option value="/">/</option>
+		<option value="%">%</option>
+	</select>
+	<input type="text" id="num2" name="num2" />
+	
+	<input type="submit" value="제출" />
+</form>
+
+</body>
+</html>
+
+
+
+
+
