@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- getParameter(name) :: 전달받은 값을 처리 -->
+<form method="get" action="printInput.jsp">
+	<label>이름: </label>
+	<input type="text" id="name" name="name" />	<br>
+	<label>나이: </label>
+	<input type="text" id="age" name="age" />	<br>
+	
+	<!-- 전공 선택 :: 라디오 타입 -->
+	<label>전공: </label>
+	<input type="radio" name="major" value="computer" />
+	<label>컴공</label>
+	<input type="radio" name="major" value="math" />
+	<label>수학</label>
+	<input type="radio" name="major" value="teacher" />
+	<label>사범</label>
+	<br>
+	
+	<!-- 취미 선택 :: 체크박스 타입 -->
+	<label>취미: </label>
+	<input type="checkbox" name="hobby" value="jogging" />
+	<label>조깅</label>
+	<input type="checkbox" name="hobby" value="cook" />
+	<label>요리</label>
+	<input type="checkbox" name="hobby" value="read" />
+	<label>독서</label>
+	<input type="checkbox" name="hobby" value="game" />
+	<label>게임</label>
+	<br>
+	
+	<!-- 주로 이용하는 포털사이트 선택 :: select 타입 -->
+	<label>애용하는 사이트: </label>
+	<select name="site">
+		<option value="naver">네이버</optionv>
+		<option value="daum">다음</option>
+		<option value="google">구글</option>
+	</select>
+	<br>
+	
+	<input type="submit" value="제출" />
+	<input type="reset" value="초기화" />		<!-- 입력값 초기화-->
+</form>
+</body>
+</html>
+
+
+
+
+
