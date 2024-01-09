@@ -38,7 +38,7 @@
 	닉네임 :: <jsp:getProperty name="user1" property="nickname" />
 	이름 :: <jsp:getProperty name="user1" property="name" />
 	
-	<form action="input_user.html">
+	<form action="">
 		<input type="submit" value="회원가입 폼으로 돌아가기" />
 	</form>
 </body>
