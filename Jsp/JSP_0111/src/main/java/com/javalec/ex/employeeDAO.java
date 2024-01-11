@@ -144,6 +144,25 @@ public class employeeDAO {
 			}
 		}
 	}
+	
+	// 특정 회원정보 삭제하는 메소드
+	public void deleteUser(String id) {
+		// DB 데이터(회원계정) 삭제를 수행 -> "그래서 무슨 계정을 삭제할 것인가"
+		// id값을 매개변수로 받아서, 삭제할 데이터 선택
+		this.Connect();		// DB에 접속
+		
+		try {
+			// id값을 통해 선택된 데이터 삭제하는 쿼리문 string형으로 우선 작성
+			String query="DELETE FROM employee WHERE id = ?";
+			ps=conn.prepareStatement(query);
+			ps.setString(1, id);
+			ps.executeUpdate();
+			// executeQuery() :: SELECT문(데이터 조회)
+			// executeUpdate() :: UPDATE문(데이터 수정), DELETE문, INSERT문
+		} catch(Exception e) {
+			System.out.println("회원정보 삭제 중 오류");
+		}
+	}
 }
 
 

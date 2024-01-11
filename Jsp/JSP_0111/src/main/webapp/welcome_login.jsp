@@ -22,8 +22,12 @@
 <p>환영합니다~~~</p>
 <br>
 <a href="changePw.html">비밀번호 변경</a>
+<a href="delete">회원탈퇴</a>
 </body>
 </html>
+
+
+
 
 
 
