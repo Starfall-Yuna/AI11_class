@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form method="post" action="confirm" name="Login" onsubmit="check_input()">
+		아이디: <input type="text" id="id" name="id" />	<br>
+		비밀번호:	<input type="text" id="pw" name="pw" />	<br>
+		
+		<input type="submit" value="제출"/>
+	</form>
+</body>
+
+<script>
+	function check_input(){
+		// 아이디 입력란 또는 비밀번호 입력란이 비어있다면
+		if(document.Login.id.value == false || !document.Login.pw.value){
+			// 사용자에게 모두 입력하라고 경고창 띄우기	
+			alert("아이디와 비밀번호를 모두 입력해주세요.");
+			return false;
+		}
+	}
+</script>
+
+</html>
+
+
+
+
+
