@@ -1,6 +1,9 @@
 package com.javalec.ex.Controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -11,6 +14,8 @@ import com.javalec.ex.Command.MemberService;
 import com.javalec.ex.Command.MemberServiceDelete;
 import com.javalec.ex.Command.MemberServiceInsert;
 import com.javalec.ex.Command.MemberServiceLogin;
+import com.javalec.ex.Command.MemberServiceSelect;
+import com.javalec.ex.DTO.MemberDTO;
 
 /**
  * Servlet implementation class CommandController
@@ -66,8 +71,21 @@ public class CommandController extends HttpServlet {
 			System.out.println("<로그인 테스트>를 수행합니다.");
 			mService = new MemberServiceLogin();
 		}
+		else if(command.equals("/select.do")) {
+			System.out.println("<회원 전체 출력>을 수행합니다.");
+			mService = new MemberServiceSelect();
+		}
 		
-		mService.execute(request, response);
+		// insert, delete, login-test 할 때엔 execute() 실행만 됨 -> null값 반환
+		// select 할 때엔 result로 실질적인 값이 반환될 것
+		ArrayList<MemberDTO> result = mService.execute(request, response);
+		if(result!=null) {
+			// Controller에서만 처리할 수 있는 건, 그냥 그렇게 하면 됨
+			// 다만 View의 역할이 필요할 때엔, RequestDispatcher를 사용
+			// 		다른 페이지에서 처리를 할 수 있도록 연결
+			RequestDispatcher dis = request.getRequestDispatcher("/getList.jsp");
+			dis.forward(request, response);
+		}
 		
 		response.sendRedirect("admin_page.html");
 	}

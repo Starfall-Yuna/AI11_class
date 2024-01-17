@@ -3,6 +3,8 @@ package com.javalec.ex.DAO;
 import java.sql.*;
 import javax.sql.DataSource;
 
+import com.javalec.ex.DTO.MemberDTO;
+
 import java.util.*;
 import javax.naming.*;
 
@@ -110,6 +112,44 @@ public class MemberDAO {
 				e2.printStackTrace();
 			}
 		}
+	}
+	
+	public ArrayList<MemberDTO> MemberSelect(){
+		ArrayList<MemberDTO> result=new ArrayList<MemberDTO> ();
+		conn=null;
+		st=null;
+		rs=null;
+		
+		try {
+			conn=ds.getConnection();
+			
+			String query="SELECT * FROM Member";
+			st=conn.createStatement();
+			rs = st.executeQuery(query);
+			
+			while(rs.next()) {
+				MemberDTO element=new MemberDTO();
+				element.setId(rs.getString("id"));
+				element.setPw(rs.getString("passwd"));
+				element.setName(rs.getString("name"));
+				// element 객체에 데이터 한 묶음씩 저장하기
+				result.add(element);
+			}
+		} catch (Exception e) {
+			System.out.println("SELECT 쿼리 수행 실패");
+			e.printStackTrace();
+		} finally {
+			try {
+				conn.close();
+				st.close();
+				rs.close();
+			} catch(Exception e2) {
+				System.out.println("객체 닫기 실패");
+				e2.printStackTrace();
+			}
+		}
+		
+		return result;
 	}
 }
 
