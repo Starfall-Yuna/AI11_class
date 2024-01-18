@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<style>
+	svg{height:300px;}
+	rect{fill: orange;}
+</style>
+</head>
+<body>
+<!-- d3.js :: 데이터 시각화에 사용되는 라이브러리 (차트 표현) -->
+<h1>막대 그래프 표현해보기</h1>
+<svg id="myChart"></svg>	<!-- svg :: 차트를 표현할 공간 마련 -->
+
+<script>
+	// 1. 데이터 생성
+	let Data = [10,20,5,100,50];
+	
+	// 2. 차트 표현
+	d3.select("#myChart")	// svg 태그 선택(차트 표현할 공간으로 선택)
+	.selectAll("rect")
+	.data(Data)			// <rect> 모두 선택+데이터 적용
+	.enter()		// html 요소 - 데이터 연결 시도 (실패 -> <rect> 태그 없음)
+		// 만약 연결 실패한다면, 아래로 요소 추가
+	.append("rect")		// 대체 요소 추가 (네모의 위치, 크기)
+	.attr("x", 0)
+	.attr("y", (data, index) => {return index*35;})
+	.attr("height", 25)
+	.attr("width", (data, index) => {return data;})
+</script>
+
+</body>
+</html>
+
+
+
+
